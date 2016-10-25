@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Linked Open Development</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/hbz.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Linked Open Development</h1>
+					<h3>Workshop at SWIB16</h3>
+					<p>
+					<small>
+						<a href="http://fsteeg.com/">Fabian Steeg</a> / 
+						<a href="https://twitter.com/fsteeg">@fsteeg</a> &amp; 
+						<a href="http://www.uebertext.org/">Adrian Pohl</a> /
+						<a href="https://twitter.com/acka47">@acka47</a> <br /> <a
+						href="https://www.hbz-nrw.de/produkte/linked-open-data">Linked
+							Open Data, Hochschulbibliothekszentrum NRW (hbz)</a> </small> <br />
+					<img src="img/hbz.png" style="border: none; padding: 5px; background-color: white" width="125px" /><br/>
+					<small>Hamburg, 2016-11-29</small>
+				</p>
+				<p>
+					This presentation: <br /> <a
+						href="http://lodworkshop.github.io/slides">http://lodworkshop.github.io/slides</a>
+				</p>
+				</section>
+
+				<section>
+					<h1>Software development in libraries</h1>
+					<p><span class="fragment">Often feels like a 1-person thing</span></p>
+					<p><span class="fragment">But factually always many people involved in development</span></p>
+					<p><span class="fragment">How do we get together?</span></p>
+				</section>
+				
+				<section>
+					<h1><a href="https://waynebeaton.wordpress.com/2012/05/01/transparent-and-open/">Transparent &amp; open</a></h1>
+					<p><span class="fragment">Transparent: Let others see what you're doing; make source code available, have public issue tracking and discussions etc.</span></p>
+					<p><span class="fragment">Open: Let others actually participate; this is the harder part: encourage participation, give up absolute power</span></p>
+					<p><span class="fragment">Being transparent is easier, and it's the foundation</span></p>
+				</section>
+				
+				<section>
+					<h1><a href="https://github.com/about">GitHub</a></h1>
+					<p><span class="fragment">Something like a social network, to <br/>&quot;learn, share, and work together to build software&quot;</span></p>
+					<p><span class="fragment">Lets you share your own projects</span></p>
+					<p><span class="fragment">Lets you participate in projects other people have shared</span></p>
+				</section>
+				
+				<section>
+					<h2>GitHub helps a lot with being transparent and open</h2>
+				</section>
+				
+				<section>
+					<h1>What we'll learn</h1>
+					<table>
+						<tr><th width="40%"/><th width="40%"/><th width="20%"/></tr>
+						<tr><td>Setting up and working on local projects with git</td><td>git basics: init, add, commit, log</td><td>40 minutes (10/2+30/2)</td></tr>
+						<tr><td>Sharing and working on projects on GitHub</td><td>git remotes, GitHub UI for repos and issues, git push, pull</td><td>40 minutes (10/4+30/4)</td></tr>
+						<tr><td>Documenting your project on GitHub</td><td>readme, markdown, gh-pages</td><td>40 minutes (10/2+30/2)</td></tr>
+						<tr><td>Contributing to existing GitHub projects</td><td>forking, cloning, branching, pull requests</td><td>40 minutes (10/4+30/4)</td></tr>
+						<tr><td>Improving openness of our own projects</td><td>license, contributing, issue_template, pull_request_template</td><td>40 minutes (10/4+30/4)</td></tr>
+						<tr><td>GitHub integrations</td><td>waffle board, issues API</td><td>40 minutes (10/2+30/2)</td></tr>
+					</table>
+				</section>
+				
+				<section>
+					<h1>Setting up and working on local projects with git</h1>
+				</section>
+				
+				<section>
+					<h1>Exercise 1:<br/>set up a local project with git</h1>
+				</section>
+
+				<section>
+					<h2>Set up project</h2>
+					<pre><code class="nohighlight" data-trim contenteditable>
+mkdir lodworkshop-project
+cd lodworkshop-project
+git init
+					</code></pre>
+					<h2>Verify project setup</h2>
+					<pre><code class="nohighlight" data-trim contenteditable>
+git status
+git log
+					</code></pre>
+					<p>Try it in your terminal!</p>
+				</section>
+				
+				<section>
+					<h1>Exercise 2:<br/>add a file to your local project</h1>
+				</section>
+
+				<section>
+					<h2>Create a file</h2>
+					<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
+					<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
+					
+					<h2>Add the file file to git</h2>
+					<pre><code class="nohighlight" data-trim contenteditable>
+git status
+git add .
+git commit
+					</code></pre>
+					<h2>Verify addition</h2>
+					<pre><code class="nohighlight" data-trim contenteditable>
+git status
+git log
+					</code></pre>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+				backgroundTransition: 'none',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
