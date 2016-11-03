@@ -44,103 +44,297 @@
 					<h1>Linked Open Development</h1>
 					<h3>Workshop at SWIB16</h3>
 					<p>
-					<small>
-						<a href="http://fsteeg.com/">Fabian Steeg</a> / 
-						<a href="https://twitter.com/fsteeg">@fsteeg</a> &amp; 
-						<a href="http://www.uebertext.org/">Adrian Pohl</a> /
-						<a href="https://twitter.com/acka47">@acka47</a> <br /> <a
-						href="https://www.hbz-nrw.de/produkte/linked-open-data">Linked
-							Open Data, Hochschulbibliothekszentrum NRW (hbz)</a> </small> <br />
-					<img src="img/hbz.png" style="border: none; padding: 5px; background-color: white" width="125px" /><br/>
-					<small>Bonn, 2016-11-29</small>
-				</p>
-				<p>
-					This presentation: <br /> <a
-						href="http://hbz.github.io/swib16-workshop">http://hbz.github.io/swib16-workshop</a>
-				</p>
+						<small>
+							<a href="http://fsteeg.com/">Fabian Steeg</a> / 
+							<a href="https://twitter.com/fsteeg">@fsteeg</a> &amp; 
+							<a href="http://www.uebertext.org/">Adrian Pohl</a> /
+							<a href="https://twitter.com/acka47">@acka47</a> <br /> <a
+							href="https://www.hbz-nrw.de/produkte/linked-open-data">Linked
+								Open Data, Hochschulbibliothekszentrum NRW (hbz)</a> </small> <br />
+						<img src="img/hbz.png" style="border: none; padding: 5px; background-color: white" width="125px" /><br/>
+						<small>Bonn, 2016-11-29</small>
+					</p>
+					<p>
+						This presentation: <br /> <a
+							href="http://hbz.github.io/swib16-workshop">http://hbz.github.io/swib16-workshop</a>
+					</p>
 				</section>
 
 				<section>
-					<h1>Software development in libraries</h1>
-					<p><span class="fragment">Often feels like a 1-person thing</span></p>
-					<p><span class="fragment">But factually always many people are involved in development</span></p>
-					<p><span class="fragment">How do we get together?</span></p>
-				</section>
-				
-				<section>
-					<h1><a href="https://waynebeaton.wordpress.com/2012/05/01/transparent-and-open/">Transparent &amp; open</a></h1>
-					<p><span class="fragment">Transparent: Let others see what you're doing; make source code available, have public issue tracking and discussions etc.</span></p>
-					<p><span class="fragment">Open: Let others actually participate; this is the harder part: encourage participation, give up absolute power</span></p>
-					<p><span class="fragment">Being transparent is easier, and it's the foundation</span></p>
-				</section>
-				
-				<section>
-					<h1><a href="https://github.com/about">GitHub</a></h1>
-					<p><span class="fragment">Something like a social network, to <br/>&quot;learn, share, and work together to build software&quot;</span></p>
-					<p><span class="fragment">Lets you share your own projects</span></p>
-					<p><span class="fragment">Lets you participate in projects other people have shared</span></p>
-				</section>
-				
-				<section>
-					<h2>GitHub helps a lot with being transparent and open</h2>
-				</section>
-				
-				<section>
-					<h1>What we'll learn</h1>
-					<table>
-						<tr><th width="40%"/><th width="40%"/><th width="20%"/></tr>
-						<tr><td>Setting up and working on local projects with git</td><td>git basics: init, add, commit, log</td><td>40 minutes (10/2+30/2)</td></tr>
-						<tr><td>Sharing and working on projects on GitHub</td><td>git remotes, GitHub UI for repos and issues, git push, pull</td><td>40 minutes (10/4+30/4)</td></tr>
-						<tr><td>Documenting your project on GitHub</td><td>readme, markdown, gh-pages</td><td>40 minutes (10/2+30/2)</td></tr>
-						<tr><td>Contributing to existing GitHub projects</td><td>forking, cloning, branching, pull requests</td><td>40 minutes (10/4+30/4)</td></tr>
-						<tr><td>Improving openness of our own projects</td><td>license, contributing, issue_template, pull_request_template</td><td>40 minutes (10/4+30/4)</td></tr>
-						<tr><td>GitHub integrations</td><td>waffle board, issues API</td><td>40 minutes (10/2+30/2)</td></tr>
-					</table>
-				</section>
-				
-				<section>
-					<h1>Setting up and working on local projects with git</h1>
-				</section>
-				
-				<section>
-					<h1>Exercise 1:<br/>set up a local project with git</h1>
+					<section>
+						<h1>Software development in libraries</h1>
+						<p><span class="fragment">Single person, internal teams, cross-organization projects</span></p>
+						<p><span class="fragment">Factually always many people are involved in development</span></p>
+						<p><span class="fragment">How do we get together?</span></p>
+					</section>
+
+					<section>
+						<h1><a href="https://waynebeaton.wordpress.com/2012/05/01/transparent-and-open/">Transparent &amp; open</a></h1>
+						<p><span class="fragment">Transparent: Let others see what you're doing; make source code available, have public issue tracking and discussions etc.</span></p>
+						<p><span class="fragment">Open: Let others actually participate; this is the harder part: encourage participation, give up absolute power</span></p>
+						<p><span class="fragment">Being transparent is easier, and it's the foundation</span></p>
+					</section>
+
+					<section>
+						<h1><a href="https://github.com/about">GitHub</a></h1>
+						<p><span class="fragment">Something like a social network, to <br/>&quot;learn, share, and work together to build software&quot;</span></p>
+						<p><span class="fragment">Lets you share your own projects</span></p>
+						<p><span class="fragment">Lets you collaborate on projects you or other people have shared</span></p>
+					</section>
+
+					<section>
+						<h2>GitHub helps a lot with being transparent and open</h2>
+					</section>
 				</section>
 
 				<section>
-					<h2>Set up project</h2>
-					<pre><code class="nohighlight" data-trim contenteditable>
+					<section>
+						<h1>What we'll learn</h1>
+					</section>
+
+					<section>
+						<h2>Share your own projects<br/><small>(individual exercises)</small></h2>
+						<table>
+							<tr><th width="40%"/><th width="40%"/><th width="20%"/></tr>
+							<tr><td>Setting up and working on local projects with git</td><td>git basics: init, add, commit, log</td><td>40 minutes (2*5+15*2)</td></tr>
+							<tr><td>Sharing and working on projects on GitHub</td><td>git remotes, GitHub web UI, git push, pull</td><td>40 minutes (3*3+3*10)</td></tr>
+							<tr><td>Documenting your project on GitHub</td><td>readme, markdown, GitHub pages</td><td>40 minutes (2*5+2*15)</td></tr>
+						</table>
+					</section>
+
+					<section>
+						<h2>Collaborate on projects<br/><small>(team exercises, developers + librarians)</small></h2>
+						<table>
+							<tr><td>Contributing to existing GitHub projects</td><td>GitHub flow: forking, cloning; issues; branching, pull requests</td><td>40 minutes (3*3+3*10)</td></tr>
+							<tr><td>Improving openness of our own projects</td><td>license, contributing, issue_template, pull_request_template</td><td>40 minutes (3*3+3*10)</td></tr>
+							<tr><td>GitHub integrations</td><td>waffle board, issues API</td><td>40 minutes (2*5+2*15)</td></tr>
+						</table>
+					</section>
+
+					<section>
+						<h1>Diverse audience</h1>
+						<p><span class="fragment">People with and without git &amp; GitHub experience</span></p>
+						<p><span class="fragment">We hope there's something interesting for everybody</span></p>
+						<p><span class="fragment">For exercises you're familiar with, maybe you'd like to help</span></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Setting up and working on local projects with git</h1>
+						<p>Prerequisite: git installed</p>
+					</section>
+
+					<section>
+						<h1>Exercise 1:<br/>set up a local project with git</h1>
+					</section>
+
+					<section>
+						<h2>Set up project</h2>
+						<pre><code class="nohighlight" data-trim contenteditable>
 mkdir lodworkshop-project
 cd lodworkshop-project
 git init
-					</code></pre>
-					<h2>Verify project setup</h2>
-					<pre><code class="nohighlight" data-trim contenteditable>
+						</code></pre>
+						<h2>Verify project setup</h2>
+						<pre><code class="nohighlight" data-trim contenteditable>
 git status
 git log
-					</code></pre>
-					<p>Try it in your terminal!</p>
-				</section>
-				
-				<section>
-					<h1>Exercise 2:<br/>add a file to your local project</h1>
-				</section>
+						</code></pre>
+						<p>Try it in your terminal!</p>
+					</section>
 
-				<section>
-					<h2>Create a file</h2>
-					<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
-					<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
-					
-					<h2>Add the file file to git</h2>
-					<pre><code class="nohighlight" data-trim contenteditable>
+					<section>
+						<h1>Exercise 2:<br/>add a file to your local project</h1>
+					</section>
+
+					<section>
+						<h2>Create a file</h2>
+						<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
+						<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
+
+						<h2>Add the file file to git</h2>
+						<pre><code class="nohighlight" data-trim contenteditable>
 git status
 git add .
 git commit
-					</code></pre>
-					<h2>Verify addition</h2>
-					<pre><code class="nohighlight" data-trim contenteditable>
+						</code></pre>
+						<h2>Verify addition</h2>
+						<pre><code class="nohighlight" data-trim contenteditable>
 git status
 git log
-					</code></pre>
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Sharing and working on projects on GitHub</h1>
+						<p>Prerequisite: GitHub account</p>
+					</section>
+					<section>
+						<h1>TODO</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Documenting your project on GitHub</h1>
+					</section>
+					<section>
+						<h1>TODO</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Contributing to existing GitHub projects</h1>
+					</section>
+
+					<section>
+						<h1>GitHub Issues</h1>
+						<p><span class="fragment">GitHub contains an integrated issue tracker</span></p>
+						<p><span class="fragment">Issues are organized with colored labels and support markdown</span></p>
+						<p><span class="fragment">Can easily link to code, commits, users</span></p>
+					</section>
+
+					<section data-background="img/github-issues.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://github.com/hbz/lobid-resources/issues"
+							href="https://github.com/hbz/lobid-resources/issues"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section> 
+
+					<section data-background="img/github-issue.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://github.com/hbz/lobid-resources/issues/79"
+							href="https://github.com/hbz/lobid-resources/issues/79"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<h1>Exercise X:<br/>fix a bug</h1>
+					</section>
+
+					<section>
+						<h2>Exercise X-a: <br/>Implement your fix</h2>
+						<span class="fragment"><p>Find a bug in the current project implementation</p></span>
+						<span class="fragment"><p>Open an issue for the bug</p></span>
+						<span class="fragment"><p>Fix the bug locally</p></span>
+					</section>
+
+					<section>
+						<h1>GitHub Flow</h1>
+						<p><span class="fragment">Used by GitHub to develop GitHub</span></p>
+						<p><span class="fragment">Git makes branching and merging easy</span></p>
+						<p><span class="fragment">Implement new features and bugfixes in separate branches</span></p>
+					</section>
+
+					<section data-background="img/github-flow.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://guides.github.com/introduction/flow/"
+							href="https://guides.github.com/introduction/flow/"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<h2>Exercise X-b: <br/>Propose your fix</h2>
+						<ol>
+						<span class="fragment"><li><p>Create a new local branch</p>
+						<pre><code class="nohighlight" data-trim contenteditable>
+git checkout -b bugfix-issue-1
+						</code></pre></li></span>
+						<span class="fragment"><li><p>Commit your changes to the branch</p></li></span>
+						<span class="fragment"><li><p>Push your branch to the remote</p>
+						<pre><code class="nohighlight" data-trim contenteditable>
+git push origin bugfix-issue-1
+						</code></pre></li></span>
+						<span class="fragment"><li><p>Open a pull request for the branch</p></li></span>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Our review process</h1>
+						<p><span class="fragment">Functional review: review actual functionality, associated with the issue, done by librarian</span></p>
+						<p><span class="fragment">Code review: review code changes, associated with the pull request, done by developer</span></p>
+						<p><span class="fragment"><a href="https://hbz.github.io/#dev-process">https://hbz.github.io/#dev-process</a></span></p>
+					</section>
+
+					<section>
+						<h2>Exercise X-c: <br/>Review your fix</h2>
+						<p><span class="fragment">Assign issue to librarian, with instructions on how to review; review</span></p>
+						<p><span class="fragment">Assign pull request to developer; review</span></p>
+						<p><span class="fragment">Both positive: merge the pull request</span></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Improving openness of our own projects</h1>
+					</section>
+					<section>
+						<h1>TODO</h1>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>GitHub integrations</h1>
+					</section>
+
+					<section>
+						<h1>Board</h1>
+						<p><span class="fragment">GitHub issues always associated with a single GitHub repo</span></p>
+						<p><span class="fragment">To get a unified view of all issues the team is working on we use a Kanban board for workflow visualization</span></p>
+						<p><span class="fragment">Waffle is Kanban board with GitHub integration:<br/> every issue is a card, columns are associated with labels</span></p>
+						<p><span class="fragment">(GitHub now has an integrated board, but for now it's single-repo)</span></p>
+					</section>
+
+					<section data-background="img/waffle.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://waffle.io/hbz/lobid"
+							href="https://waffle.io/hbz/lobid"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<h1>Process</h1>
+						<p>In general: left &rarr; right</p>
+						<small>
+						<table>
+							<thead>
+								<tr>
+									<th>Backlog</th>
+									<th>Ready</th>
+									<th>Working</th>
+									<th>Review</th>
+									<th>Deploy</th>
+									<th>Done</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>New, unlabelled issues</td>
+									<td>Requirements and depenencies are clear enough to start working</td>
+									<td>Actively worked on issues</td>
+									<td>Issues under review</td>
+									<td>Can be deployed to production</td>
+									<td>Deployed and running in production</td>
+								</tr>
+							</tbody>
+						</table>
+						</small>
+						<p>We move high priority issues to the top of each column</p>
+					</section>
+				</section>
+
+				<section>
+					<h1>Feedback welcome!</h1>
+					<h2><a href="https://github.com/hbz/swib16-workshop/issues/new">https://github.com/hbz/swib16-workshop/issues/new</a></h2>
 				</section>
 
 			</div>
@@ -160,7 +354,7 @@ git log
 				history: true,
 				center: true,
 
-				transition: 'none', // none/fade/slide/convex/concave/zoom
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				backgroundTransition: 'none',
 
 				// Optional reveal.js plugins
