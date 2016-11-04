@@ -10,21 +10,21 @@ For me, this workshop has been
 
 _We offered this kind of workshop for the first time. Certainly things can be improved. Please add what comes to your mind._
 
-## Things that were missing.
+## Things that were missing
 
 
-## Things that were unnecessary.
+## Things that were unnecessary
 
 
-## Things I would have needed more time/explanation/examples to understand.
+## Things I would have needed more time/explanation/examples to understand
 
 
-## Things that were explained
+## Things that needed less time to spend with
 
 
 # Things I really liked about the workshop
 
-_ Please write down two or three things that you found most insightful or exciting about the workshop._
+_Please write down two or three things that you found most insightful or exciting about the workshop._
 
 
 # More feedback
