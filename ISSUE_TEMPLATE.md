@@ -8,7 +8,7 @@ For me, this workshop has been
 
 # Things to improve
 
-_We offered this kind of workshop for the first time. Certainly things can be improved. Please add what comes to you mind._
+_We offered this kind of workshop for the first time. Certainly things can be improved. Please add what comes to your mind._
 
 ## Things that were missing.
 
