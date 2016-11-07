@@ -133,6 +133,7 @@
 					<section>
 						<h2>Set up project</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
+cd ; mkdir git ; cd git
 mkdir lodworkshop-project
 cd lodworkshop-project
 git init
@@ -185,13 +186,13 @@ git log
 						<h1>Exercise 3:<br/>Set up a remote</h1>
 					</section>
 					<section>
-						<h2>Exercise 3a: <br/>Create a remote repo</h2>
+						<h2>Exercise 3-a: <br/>Create a remote repo</h2>
 						<span class="fragment"><p>Create new repo on <a target="_blank" href="http://github.com">github.com</a> ('+' sign, upper right)</p></span>
 						<span class="fragment"><p>Set the repository name to 'lodworkshop-project'</p></span>
 						<span class="fragment"><p>Click 'Create repository'</p></span>
 					</section>
 					<section>
-						<h2>Exercise 3b: <br/>Connect your local and your remote repo</h2>
+						<h2>Exercise 3-b: <br/>Connect your local and your remote repo</h2>
 						<ol>
 						<span class="fragment"><li><p>Copy repo URL (green button 'clone or download')</p></li></span>
 						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
@@ -211,23 +212,47 @@ git push origin master
 					</section>
 					<section>
 						<h1>README</h1>
-						<p>TODO</p>
+						<p><span class="fragment">The README file is the entry point for your project's documentation</span></p>
+						<p><span class="fragment">GitHub displays the README's content on your repo's entry page</span></p>
+					</section>
+					<section>
+						<h2>Exercise 4-a:<br/>simple README file</h2>
+						<p><span class="fragment">With your text editor, create a new file with content:<br/> <code>The locations.csv file maps location names to geo coordinates formatted as "latitude,longitude".</code></span></p>
+						<p><span class="fragment">Save it as <code>README</code> in <code>lodworkshop-project</code></span></p>
+						<p><span class="fragment">Add, commit, and push it to GitHub</span></p>
+						<p><span class="fragment">Visit your repo on GitHub</span></p>
 					</section>
 					<section>
 						<h1>Markdown</h1>
-						<p>TODO</p>
+						<p><span class="fragment">Markdown is a lightweight wiki-style markup language</span></p>
+						<p><span class="fragment">Plain, simple, readable text files &amp; visual HTML rendering</span></p>
+						<p><span class="fragment">Supported everywhere on GitHub: wiki, issues, README, etc.</span></p>
+					</section>
+					<section>
+						<h2>Exercise 4-b:<br/>README formatting</h2>
+						<p><span class="fragment">Rename the README file to README.md</span></p>
+						<p><span class="fragment">Add headers, styling, and details to your README content</span></p>
+						<p><span class="fragment"><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">http://help.github.com/articles/basic-writing-and-formatting-syntax</a></span></p>
 					</section>
 					<section>
 						<h1>GitHub pages</h1>
-						<p>TODO</p>
+						<p><span class="fragment">GitHub also provides hosting of static HTML for your repo</span></p>
+						<p><span class="fragment">Pages are available at <br/><code>http://&lt;username&gt;.github.io/&lt;repo-name&gt;</code></span></p>
+						<p><span class="fragment">We use it for this presentation: <br/><a href="http://hbz.github.io/swib16-workshop">http://hbz.github.io/swib16-workshop</a></span></p>
+					</section>
+					<section>
+						<h2>Exercise 5:<br/>Set up a GitHub page</h2>
+						<p><span class="fragment">Go to your repo's settings, then 'Launch automatic page generator'</span></p>
+						<p><span class="fragment">Load initial content from README.md, select a theme</span></p>
+						<p><span class="fragment">The pages are actually files in your repo, see details:<br/><a href="https://help.github.com/categories/github-pages-basics/">https://help.github.com/categories/github-pages-basics/</a></span></p>
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<h1>Contributing to existing GitHub projects</h1>
-					</section>
+					<h1>Contributing to existing GitHub projects</h1>
+				</section>
 
+				<section>
 					<section>
 						<h1>GitHub Issues</h1>
 						<p><span class="fragment">GitHub contains an integrated issue tracker</span></p>
@@ -250,22 +275,49 @@ git push origin master
 								&nbsp;<br />&nbsp;<br />&nbsp;
 							</h1></a>
 					</section>
-
+				</section>
+				<section>
 					<section>
 						<h1>Team exercises</h1>
-						<p>Mixed teams, different roles: developers and librarians</p>
-						<p>Different tasks for each role</p>
+						<p><span class="fragment">Mixed teams, different roles: developers and librarians</span></p>
+						<p><span class="fragment">Different tasks for each role</span></p>
 					</section>
 
 					<section>
-						<h1>Exercise X:<br/>fix a bug</h1>
+						<h1>Libraries in Cologne</h1>
+						<p>TODO: set up project repo and pages</p>
+						<p>Repository:<br/><a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a></p>
+						<p>Deployed site:<br/><a href="http://hbz.github.io/swib16-project" target="_blank">http://hbz.github.io/swib16-project</a></p>
 					</section>
 
 					<section>
-						<h2>Exercise X-a: <br/>Implement your fix</h2>
-						<span class="fragment"><p>Find a bug in the current project implementation</p></span>
-						<span class="fragment"><p>Open an issue for the bug</p></span>
-						<span class="fragment"><p>Fix the bug locally</p></span>
+						<h2>Exercise 6:<br/>fork and clone the repo</h2>
+						<ol>
+						<span class="fragment"><li><p>Go to <a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a>, click Fork (upper left)</p></li></span>
+						<span class="fragment"><li><p>Copy the URL (green button 'clone or download') of your fork</p></li></span>
+						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
+cd ; cd git
+git clone URL-YOU-COPIED
+cd swib16-project
+						</code></pre></li></span>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Implementation details</h1>
+						<p>TODO: Javascript, Lobid API, location queries (SWIB15 slides)</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Exercise 7:<br/>fix a bug</h1>
+					</section>
+
+					<section>
+						<h2>Exercise 7-a: <br/>Implement your fix</h2>
+						<p><span class="fragment">Find a bug in the current project implementation</span></p>
+						<p><span class="fragment">Open an issue for the bug</span></p>
+						<p><span class="fragment">Fix the bug locally</span></p>
 					</section>
 
 					<section>
@@ -284,7 +336,7 @@ git push origin master
 					</section>
 
 					<section>
-						<h2>Exercise X-b: <br/>Propose your fix</h2>
+						<h2>Exercise 7-b: <br/>Propose your fix</h2>
 						<ol>
 						<span class="fragment"><li><p>Create a new local branch</p>
 						<pre><code class="nohighlight" data-trim contenteditable>
@@ -307,12 +359,20 @@ git push origin bugfix-issue-1
 					</section>
 
 					<section>
-						<h2>Exercise X-c: <br/>Review your fix</h2>
+						<h2>Exercise 7-c: <br/>Review your fix</h2>
 						<p><span class="fragment">Assign issue to librarian, with instructions on how to review; review</span></p>
 						<p><span class="fragment">Assign pull request to developer; review</span></p>
 						<p><span class="fragment">Both positive: merge the pull request</span></p>
 					</section>
+				</section>
+				<section>
+					<h1>Exercise 8:<br/>add a feature</h1>
+					<p><span class="fragment">Libraries in X, each team picks a place</span></p>
+					<p><span class="fragment">Open an issue for the feature</span></p>
+					<p><span class="fragment">Implement the feature locally, propose, review, and deploy it</span></p>
+				</section>
 
+				<section>
 					<section>
 						<h1>Process visualization</h1>
 						<p><span class="fragment">To get a unified view of a team's issues from different repos we use a Kanban board</span></p>
