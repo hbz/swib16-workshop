@@ -133,6 +133,7 @@
 					<section>
 						<h2>Set up project</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
+cd ; mkdir git ; cd git
 mkdir lodworkshop-project
 cd lodworkshop-project
 git init
@@ -140,7 +141,6 @@ git init
 						<h2>Verify project setup</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
 git status
-git log
 						</code></pre>
 						<p>Try it in your terminal!</p>
 					</section>
@@ -154,7 +154,7 @@ git log
 						<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
 						<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
 
-						<h2>Add the file file to git</h2>
+						<h2>Add the file to git</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
 git status
 git add .
@@ -170,11 +170,38 @@ git log
 
 				<section>
 					<section>
-						<h1>Sharing and working on projects on GitHub</h1>
+						<h1>Sharing and working on GitHub projects</h1>
 						<p>Prerequisite: GitHub account</p>
 					</section>
 					<section>
-						<h1>TODO</h1>
+						<h1>Remotes</h1>
+						<p><span class="fragment">Remote repo: a copy of your local git repo on a server, e.g. on GitHub's servers</span></p>
+						<p><span class="fragment">We <b>push</b> our local changes to remote repos, and <b>pull</b> changes by others from remote repos</span></p>
+					</section>
+					<section data-background="img/remote.png"
+						data-background-size="contain">
+					</section> 
+					<section>
+						<h1>Exercise 3:<br/>Set up a remote</h1>
+					</section>
+					<section>
+						<h2>Exercise 3-a: <br/>Create a remote repo</h2>
+						<span class="fragment"><p>Create new repo on <a target="_blank" href="http://github.com">github.com</a> ('+' sign, upper right)</p></span>
+						<span class="fragment"><p>Set the repository name to 'lodworkshop-project'</p></span>
+						<span class="fragment"><p>Click 'Create repository'</p></span>
+					</section>
+					<section>
+						<h2>Exercise 3-b: <br/>Connect your local and your remote repo</h2>
+						<ol>
+						<span class="fragment"><li><p>Copy repo URL (green button 'clone or download')</p></li></span>
+						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
+git remote add origin URL-YOU-COPIED
+						</code></pre></li></span>
+						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
+git push origin master
+						</code></pre></li></span>
+						<span class="fragment"><li><p>Visit your repo on <a target="_blank" href="http://github.com">github.com</a>, verify your file is there</p></li></span>
+						</ol>
 					</section>
 				</section>
 
@@ -183,15 +210,48 @@ git log
 						<h1>Documenting your project on GitHub</h1>
 					</section>
 					<section>
-						<h1>TODO</h1>
+						<h1>README</h1>
+						<p><span class="fragment">The README file is the entry point for your project's documentation</span></p>
+						<p><span class="fragment">GitHub displays the README's content on your repo's entry page</span></p>
+					</section>
+					<section>
+						<h2>Exercise 4-a:<br/>simple README file</h2>
+						<p><span class="fragment">With your text editor, create a new file with content:<br/> <code>The locations.csv file maps location names to geo coordinates formatted as "latitude,longitude".</code></span></p>
+						<p><span class="fragment">Save it as <code>README</code> in <code>lodworkshop-project</code></span></p>
+						<p><span class="fragment">Add, commit, and push it to GitHub</span></p>
+						<p><span class="fragment">Visit your repo on GitHub</span></p>
+					</section>
+					<section>
+						<h1>Markdown</h1>
+						<p><span class="fragment">Markdown is a lightweight wiki-style markup language</span></p>
+						<p><span class="fragment">Plain, simple, readable text files &amp; visual HTML rendering</span></p>
+						<p><span class="fragment">Supported everywhere on GitHub: wiki, issues, README, etc. (and on many other sites)</span></p>
+					</section>
+					<section>
+						<h2>Exercise 4-b:<br/>README formatting</h2>
+						<p><span class="fragment">Rename the README file to README.md</span></p>
+						<p><span class="fragment">Add headers, styling, and details to your README content</span></p>
+						<p><span class="fragment"><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">http://help.github.com/articles/basic-writing-and-formatting-syntax</a></span></p>
+					</section>
+					<section>
+						<h1>GitHub pages</h1>
+						<p><span class="fragment">GitHub also provides hosting of static HTML for your repo</span></p>
+						<p><span class="fragment">Pages are available at <br/><code>http://&lt;username&gt;.github.io/&lt;repo-name&gt;</code></span></p>
+						<p><span class="fragment">We use it for this presentation: <br/><a href="http://hbz.github.io/swib16-workshop">http://hbz.github.io/swib16-workshop</a></span></p>
+					</section>
+					<section>
+						<h2>Exercise 5:<br/>Set up a GitHub page</h2>
+						<p><span class="fragment">Go to your repo's settings, then 'Launch automatic page generator'</span></p>
+						<p><span class="fragment">Load initial content from README.md, select a theme</span></p>
+						<p><span class="fragment">The pages are actually files in your repo, see details:<br/><a href="https://help.github.com/categories/github-pages-basics/">https://help.github.com/categories/github-pages-basics/</a></span></p>
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<h1>Contributing to existing GitHub projects</h1>
-					</section>
+					<h1>Contributing to existing GitHub projects</h1>
+				</section>
 
+				<section>
 					<section>
 						<h1>GitHub Issues</h1>
 						<p><span class="fragment">GitHub contains an integrated issue tracker</span></p>
@@ -214,22 +274,180 @@ git log
 								&nbsp;<br />&nbsp;<br />&nbsp;
 							</h1></a>
 					</section>
-
+				</section>
+				<section>
 					<section>
 						<h1>Team exercises</h1>
-						<p>Mixed teams, different roles: developers and librarians</p>
-						<p>Different tasks for each role</p>
+						<p><span class="fragment">Mixed teams, different roles: developers and non-developers</span></p>
+						<p><span class="fragment">Different tasks for each role</span></p>
 					</section>
 
 					<section>
-						<h1>Exercise X:<br/>fix a bug</h1>
+						<h2>
+							Project: <br />an interactive map
+						</h2>
+						<h1>
+							<span class="fragment">Libraries in Bonn</span>
+						</h1>
 					</section>
 
 					<section>
-						<h2>Exercise X-a: <br/>Implement your fix</h2>
-						<span class="fragment"><p>Find a bug in the current project implementation</p></span>
-						<span class="fragment"><p>Open an issue for the bug</p></span>
-						<span class="fragment"><p>Fix the bug locally</p></span>
+						<h2>Exercise 6:<br/>fork and clone the repo</h2>
+						<ol>
+						<span class="fragment"><li><p>Go to <a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a>, click Fork (upper right)</p></li></span>
+						<span class="fragment"><li><p>Copy the URL (green button 'clone or download') of your fork</p></li></span>
+						<span class="fragment"><li><p><pre><code class="nohighlight" data-trim contenteditable>
+cd ; cd git
+git clone URL-YOU-COPIED
+cd swib16-project
+						</code></pre></p></li></span>
+						</ol>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>
+							Libraries in Bonn:<br />implementation
+						</h1>
+						<p><span class="fragment">HTML &amp; Javascript for the map</span></p>
+						<p><span class="fragment">Uses the Lobid API for organisation data</span></p>
+					</section>
+
+					<section>
+						<h1>Using an API?</h1>
+						<p>What does that even mean?</p>
+						<span class="fragment">
+							<p>For Web APIs:</p>
+							<h1>opening URLs!</h1>
+						</span>
+					</section>
+
+					<section>
+						<h2>Just like opening a web site</h2>
+						<span class="fragment"><h2>but we want structured data</h2> </span>
+					</section>
+
+					<section data-background="img/lobid-api-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live query"
+							href="http://beta.lobid.org/organisations/search?format=json&q=hbz"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/lobid-api-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live query"
+							href="http://beta.lobid.org/organisations/search?format=json&q=zbw"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<p>We can edit and re-open the URL in the browser bar</p>
+						<h2>We're using the API</h2>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Same URL, other usage</h2>
+						<p><span class="fragment">Call URL from command line</span></p>
+						<p><span class="fragment">Call URL from code, e.g. Javascript</span></p>
+					</section>
+
+					<section data-background="img/map-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live query"
+							href="http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section data-background="img/map-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live query"
+							href="http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section data-background="img/map-3.png"
+						data-background-size="contain">
+						<a target="_blank" title="Go to source file"
+							href="https://github.com/hbz/swib16-project/blob/master/index.html"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/map-4.png"
+						data-background-size="contain">
+						<a target="_blank" title="Go to source file"
+							href="https://github.com/hbz/swib16-project/blob/master/index.html"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section data-background="img/map-5.png"
+						data-background-size="contain">
+						<a target="_blank" title="Go to source file"
+							href="https://github.com/hbz/swib16-project/blob/master/index.html"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section data-background="img/map-6.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live site" href="https://hbz.github.io/swib16-project/"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+				</section>
+
+				<section>
+					<h1>Libraries in Bonn</h1>
+					<small>
+						<table>
+							<tbody>
+								<tr>
+									<td>Look at a sample organisation</td>
+									<td><small><a
+											href="http://beta.lobid.org/organisations/DE-Bo133?format=json" target="_blank">http://beta.lobid.org/organisations/DE-Bo133?format=json</a></small></td>
+								</tr>
+								<tr>
+									<td>Find field to query</td>
+									<td><code>type</code> AND <code>location.address.addressLocality</code></td>
+								</tr>
+								<tr>
+									<td>Create query</td>
+									<td><small><a
+											href="http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn" target="_blank">
+												http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn</a></small></td>
+								</tr>
+								<tr>
+									<td>Embed Leaflet.js and some Javascript code in an HTML file
+										which calls query above and uses response fields</td>
+									<td><code>location.geo.lat</code> and <code>location.geo.lon</code></td>
+								</tr>
+								<tr>
+									<td>Open HTML file in browser</td>
+									<td><a href="https://hbz.github.io/swib16-project/" target="_blank">site</a>, <a
+										href="https://github.com/hbz/swib16-project/blob/master/index.html" target="_blank">source</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</small>
+				</section>
+				<section>
+					<section>
+						<h1>Exercise 7:<br/>fix a bug</h1>
+					</section>
+
+					<section>
+						<h2>Exercise 7-a: <br/>Implement your fix</h2>
+						<p><span class="fragment">Find a bug in the current project implementation</span></p>
+						<p><span class="fragment">Open an issue for the bug</span></p>
+						<p><span class="fragment">Fix the bug locally</span></p>
 					</section>
 
 					<section>
@@ -248,7 +466,7 @@ git log
 					</section>
 
 					<section>
-						<h2>Exercise X-b: <br/>Propose your fix</h2>
+						<h2>Exercise 7-b: <br/>Propose your fix</h2>
 						<ol>
 						<span class="fragment"><li><p>Create a new local branch</p>
 						<pre><code class="nohighlight" data-trim contenteditable>
@@ -265,18 +483,26 @@ git push origin bugfix-issue-1
 
 					<section>
 						<h1>Our review process</h1>
-						<p><span class="fragment">Functional review: review actual functionality, associated with the issue, done by librarian</span></p>
+						<p><span class="fragment">Functional review: review actual functionality, associated with the issue, done by non-developer</span></p>
 						<p><span class="fragment">Code review: review code changes, associated with the pull request, done by developer</span></p>
 						<p><span class="fragment"><a href="https://hbz.github.io/#dev-process">https://hbz.github.io/#dev-process</a></span></p>
 					</section>
 
 					<section>
-						<h2>Exercise X-c: <br/>Review your fix</h2>
-						<p><span class="fragment">Assign issue to librarian, with instructions on how to review; review</span></p>
+						<h2>Exercise 7-c: <br/>Review your fix</h2>
+						<p><span class="fragment">Assign issue to non-developer, with instructions on how to review; review</span></p>
 						<p><span class="fragment">Assign pull request to developer; review</span></p>
 						<p><span class="fragment">Both positive: merge the pull request</span></p>
 					</section>
+				</section>
+				<section>
+					<h1>Exercise 8:<br/>add a feature</h1>
+					<p><span class="fragment">Libraries in X, each team picks a place</span></p>
+					<p><span class="fragment">Open an issue for the feature</span></p>
+					<p><span class="fragment">Implement the feature locally, propose, review, and deploy it</span></p>
+				</section>
 
+				<section>
 					<section>
 						<h1>Process visualization</h1>
 						<p><span class="fragment">To get a unified view of a team's issues from different repos we use a Kanban board</span></p>
@@ -324,7 +550,7 @@ git push origin bugfix-issue-1
 							<tbody>
 								<tr>
 									<td>New, unlabelled issues</td>
-									<td>Requirements and depenencies are clear enough to start working</td>
+									<td>Requirements and dependencies are clear enough to start working</td>
 									<td>Actively worked on issues</td>
 									<td>Issues under review</td>
 									<td>Can be deployed to production</td>
@@ -339,27 +565,33 @@ git push origin bugfix-issue-1
 
 				<section>
 					<section>
-						<h1>Improving openness of our own projects</h1>
+						<h1>Improving inclusivity</h1>
+						<p><a href="https://help.github.com/articles/helping-people-contribute-to-your-project/" target="_blank">help.github.com/articles/helping-people-contribute-to-your-project</a></p>
 					</section>
 					<section>
 						<h1>License</h1>
-						<p>TODO</p>
+						<p>TODO: Explain, Exercise to add</p>
+						<p><a href="https://help.github.com/articles/adding-a-license-to-a-repository" target="_blank">help.github.com/articles/adding-a-license-to-a-repository</a></p>
 					</section>
 					<section>
 						<h1>Contributing</h1>
-						<p>TODO</p>
+						<p>TODO: Explain, Exercise to add</p>
+						<p><a href="https://help.github.com/articles/setting-guidelines-for-repository-contributors" target="_blank">help.github.com/articles/setting-guidelines-for-repository-contributors</a></p>
 					</section>
 					<section>
 						<h1>Code of conduct</h1>
-						<p>TODO</p>
+						<p>TODO: Explain, Exercise to add</p>
+						<p><a href="https://help.github.com/articles/adding-a-code-of-conduct-to-your-project" target="_blank">help.github.com/articles/adding-a-code-of-conduct-to-your-project</a></p>
 					</section>
 					<section>
 						<h1>Pull request templates</h1>
-						<p>TODO</p>
+						<p>TODO: Explain, Exercise to add</p>
+						<p><a href="https://help.github.com/articles/creating-a-pull-request-template-for-your-repository" target="_blank">help.github.com/articles/creating-a-pull-request-template-for-your-repository</a></p>
 					</section>
 					<section>
 						<h1>Issue templates</h1>
-						<p>TODO</p>
+						<p>TODO: Explain, Exercise to add</p>
+						<p><a href="https://help.github.com/articles/helping-people-contribute-to-your-project/" target="_blank">help.github.com/articles/helping-people-contribute-to-your-project</a></p>
 					</section>
 					<section>
 						<h1>Feedback welcome! <br/><small>(with issue templates)</small></h1>
@@ -373,6 +605,7 @@ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h1>TODO</h1>
+						<p><a href="https://developer.github.com/" target="_blank">https://developer.github.com/</a></p>
 					</section>
 				</section>
 
