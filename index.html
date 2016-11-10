@@ -645,11 +645,95 @@ git push origin bugfix-issue-1
 
 				<section>
 					<section>
-						<h1>GitHub API</h1>
+						<h1>Owning your content</h1>
+						<p><span class="fragment">GitHub is proprietary software</span></p>
+						<p><span class="fragment">Almost all the things we saw are part of the git repo <br/>(actual code, readme, contributor guide, templates)</span></p>
+						<p><span class="fragment">Except: issues and pull request</span></p>
 					</section>
 					<section>
-						<h1>TODO</h1>
+						<h1>GitHub API</h1>
 						<p><a href="https://developer.github.com/" target="_blank">https://developer.github.com/</a></p>
+					</section>
+					<section>
+						<h1>Repos</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop" target="_blank">https://api.github.com/repos/hbz/swib16-workshop</a></p>
+					</section>
+					<section data-background="img/api-repo-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop"
+							href="https://api.github.com/repos/hbz/swib16-workshop"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-repo-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop"
+							href="https://api.github.com/repos/hbz/swib16-workshop"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>Issues <br/>(&amp; pull requests)</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all" target="_blank">https://api.github.com/repos/hbz/swib16-workshop/issues?state=all</a></p>
+					</section>
+					<section data-background="img/api-issues-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-issues-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-issues-3.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>Comments</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments" target="_blank">https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments</a></p>
+					</section>
+					<section data-background="img/api-comments-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues/19/commentsl"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-comments-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>cURL</h1>
+						<p>TODO: cURL intro, exercise</p>
+					</section>
+					<section>
+						<h1>jq</h1>
+						<p>TODO: jq intro, exercise</p>
+					</section>
+					<section>
+						<h1>Webhooks &amp; events</h1>
+						<p><span class="fragment">You can register a webhook for your project</span></p>
+						<p><span class="fragment">Makes GitHub send events to a specified URL<br/>e.g. when commits are pushed, issues opened, or comments added</span></p>
+						<p><span class="fragment">Server running at given URL can handle these events</span></p>
+					</section>
+					<section>
+						<h1>Webhook sample</h1>
+						<p><span class="fragment">We use GitHub Webhooks for the Metafacture project</span></p>
+						<p><span class="fragment">Back up issues in the metafacture-documentation repo | <a href="https://github.com/culturegraph/metafacture-documentation/issues/1" target="_blank">details</a></span></p>
+						<p><span class="fragment">Tweet project activity | <a href="https://github.com/culturegraph/metafacture-documentation/issues/2" target="_blank">details</a></span></p>
 					</section>
 				</section>
 
