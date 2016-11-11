@@ -717,11 +717,87 @@ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h1>cURL</h1>
-						<p>TODO: cURL intro, exercise</p>
+						<p><span class="fragment">&quot;Command line tool and library for transferring data with URLs&quot;</span></p>
+						<p><span class="fragment"><a href="https://curl.haxx.se/download.html" target="_blank">https://curl.haxx.se/download.html</a></span></p>
+					</section>
+					<section>
+<h2>Exercise 13: cURL</h2>
+<pre><code class="bash">
+# Get your own profile
+curl https://api.github.com/users/&lt;username&gt;
+
+# Same, but authenticated and show some information:
+curl -i -u &lt;username&gt; https://api.github.com/user
+
+# Get data for a repo
+curl -i -u &lt;username&gt; https://api.github.com/repos/hbz/swib16-workshop
+
+</code></pre>
 					</section>
 					<section>
 						<h1>jq</h1>
-						<p>TODO: jq intro, exercise</p>
+						<p><span class="fragment">Last cURL output was pretty long, we often want specific values</span></p>
+						<p><span class="fragment">jq: &quot;A lightweight and flexible command-line JSON processor&quot;</span></p>
+						<p><span class="fragment"><a href="https://stedolan.github.io/jq/" target="_blank">https://stedolan.github.io/jq/</a></span></p>
+						<p><span class="fragment"><a href="https://jqplay.org/">https://jqplay.org/</a></span></p>
+					</section>
+					<section>
+<h2>Exercise 14: jq basics</h2>
+<pre><code class="bash"># We start with cURL again:
+curl 'https://api.github.com/repos/hbz/swib16-workshop/commits'
+
+# We pipe the JSON to the jq format
+curl 'https://api.github.com/repos/hbz/swib16-workshop/commits' | jq
+
+# Pick out just the first array element
+curl [...] | jq '.[0]'
+
+# Construct new JSON with the fields we care about
+jq '.[0] | {message: .commit.message, author: .commit.author.name}'
+
+# Looks good, now let's feed each commit into that format
+jq '.[] | {message: .commit.message, author: .commit.author.name}'
+
+# You can redirect any output to a file
+curl [...] | jq '.[] | .commit.author.name' > output.txt
+</code></pre>
+					</section>
+					<section>
+<h2>Exercise 15: backup issues</h2>
+<pre><code class="bash"># We start with cURL again:
+curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all
+
+# The task: get all issues, with all their comments, store as file
+</code></pre>
+<pre><code class="bash"># jq supports compact output, "JSON lines"
+jq -c
+
+# How to delete quotes from a URL:
+"https://api.github.com/repos/hbz/swib16-workshop" | tr -d '"'
+
+# How to iterate over a list of URLs in a file:
+while read URL
+do
+  echo $URL
+done &lt; urls.txt
+</code></pre>
+					</section>
+					<section>
+<h2>Exercise 15: sample solution</h2>
+<pre><code class="bash"># First lets collect all issues with IDs and their comments URLs:
+curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all 
+ | jq -c '.[] | {id: .number, body: .body, comments: .comments_url'} 
+ > issues.jsonl
+
+# For each line, we then append the body and all comments to a file:
+while read ISSUE
+do
+	ID=$(echo $ISSUE | jq '.id')
+	echo $ISSUE | jq '.body' > $ID.txt
+	URL=$(echo $ISSUE | jq '.comments' | tr -d '"')
+	curl $URL | jq '.[] | .body' >> $ID.txt
+done &lt; issues.jsonl
+</code></pre>
 					</section>
 					<section>
 						<h1>Webhooks &amp; events</h1>
