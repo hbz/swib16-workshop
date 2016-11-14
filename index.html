@@ -122,6 +122,29 @@
 
 				<section>
 					<section>
+						<h1>Git</h1>
+						<p><span class="fragment">Git is a version control system</span></p>
+						<p><span class="fragment">It's the technical core of GitHub</span></p>
+					</section>
+	
+					<section>
+						<h1>Version control</h1>
+						<p><span class="fragment">Version control is like a time machine for your files</span></p>
+						<p><span class="fragment">You <i>commit</i> files and edits to the version control system</span></p>
+						<p><span class="fragment">You can go back to or look at any state you committed</span></p>
+					</section>
+	
+					<section>
+						<h1>It's great!</h1>
+						<p><span class="fragment">You <a href="http://chris.beams.io/posts/git-commit/#seven-rules">describe</a> the commit with a comment</span></p>
+						<p><span class="fragment">For each commit, you can see which files changed and how, plus the description of the changes</span></p>
+						<p><span class="fragment">You have a history where you can look up how and why the files came to be the way they are right now</span></p>
+						<p><span class="fragment">And a safety net that allows you to roll back to any previous state</span></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
 						<h1>Setting up and working on local projects with git</h1>
 						<p>Prerequisite: git installed</p>
 					</section>
@@ -154,11 +177,10 @@ git status
 						<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
 						<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
 
-						<h2>Add the file to git</h2>
+						<h2>Commit the file to git</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
 git status
-git add .
-git commit
+git commit -a .
 						</code></pre>
 						<h2>Verify addition</h2>
 						<pre><code class="nohighlight" data-trim contenteditable>
@@ -232,6 +254,12 @@ git push origin master
 						<p><span class="fragment">Rename the README file to README.md</span></p>
 						<p><span class="fragment">Add headers, styling, and details to your README content</span></p>
 						<p><span class="fragment"><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">http://help.github.com/articles/basic-writing-and-formatting-syntax</a></span></p>
+					</section>
+					<section>
+						<h1>Wiki</h1>
+						<p><span class="fragment">GitHub contains a Wiki for each repo, <br/>e.g. <a href="https://github.com/d3/d3/wiki" target="_blank">https://github.com/d3/d3/wiki</a></span></p>
+						<p><span class="fragment">The Wiki is actually a Git repo with Markdown files, <br/>e.g. <code>https://github.com/d3/d3.wiki.git</code></span></p>
+						<p><span class="fragment">This means you get a full local copy of the Wiki, including it's history</span></p>
 					</section>
 					<section>
 						<h1>GitHub pages</h1>
@@ -575,10 +603,18 @@ git push origin bugfix-issue-1
 						<p><span class="fragment">Detected by GitHub to show license on top of repo page</span></p>
 					</section>
 					<section>
-						<h1>License types</h1>
+						<h1>Software licenses</h1>
 						<p><span class="fragment">Strong copyleft: GPL, AGPL</span></p>
 						<p><span class="fragment">Weak copyleft: LGPL, EPL</span></p>
 						<p><span class="fragment">Permissive: MIT, BSD</span></p>
+						<p><span class="fragment"><a href="http://choosealicense.com/">http://choosealicense.com/</a></span></p>
+					</section>
+					<section>
+						<h1>Data licenses</h1>
+						<p><span class="fragment">For data, other licenses might make more sense</span></p>
+						<p><span class="fragment"><a href="http://choosealicense.com/">choosealicense.com</a> <a href="http://choosealicense.com/appendix/">lists</a> CC0, CC-BY-4.0 and CC-BY-SA-4.0</span></p>
+						<p><span class="fragment">&quot;Choosealicense.com is intended to demystify license choices, not present or catalog all of them.&quot;</span></p>
+						<p><span class="fragment">Choosealicense.com's contributor guide lists <a href="https://github.com/github/choosealicense.com/blob/gh-pages/CONTRIBUTING.md#adding-a-license">explicit criteria</a></span></p>
 					</section>
 					<section>
 						<h2>Exercise 9:<br/>add a license</h2>
@@ -645,11 +681,171 @@ git push origin bugfix-issue-1
 
 				<section>
 					<section>
-						<h1>GitHub API</h1>
+						<h1>Owning your content</h1>
+						<p><span class="fragment">GitHub is proprietary software</span></p>
+						<p><span class="fragment">Almost all the things we saw are part of the git repo <br/>(actual code, readme, contributor guide, templates)</span></p>
+						<p><span class="fragment">Except: issues and pull request</span></p>
 					</section>
 					<section>
-						<h1>TODO</h1>
+						<h1>GitHub API</h1>
 						<p><a href="https://developer.github.com/" target="_blank">https://developer.github.com/</a></p>
+					</section>
+					<section>
+						<h1>Repos</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop" target="_blank">https://api.github.com/repos/hbz/swib16-workshop</a></p>
+					</section>
+					<section data-background="img/api-repo-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop"
+							href="https://api.github.com/repos/hbz/swib16-workshop"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-repo-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop"
+							href="https://api.github.com/repos/hbz/swib16-workshop"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>Issues <br/>(&amp; pull requests)</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all" target="_blank">https://api.github.com/repos/hbz/swib16-workshop/issues?state=all</a></p>
+					</section>
+					<section data-background="img/api-issues-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-issues-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-issues-3.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues?state=all"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>Comments</h1>
+						<p><a href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments" target="_blank">https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments</a></p>
+					</section>
+					<section data-background="img/api-comments-1.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues/19/commentsl"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section data-background="img/api-comments-2.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"
+							href="https://api.github.com/repos/hbz/swib16-workshop/issues/19/comments"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+					<section>
+						<h1>cURL</h1>
+						<p><span class="fragment">&quot;Command line tool and library for transferring data with URLs&quot;</span></p>
+						<p><span class="fragment"><a href="https://curl.haxx.se/download.html" target="_blank">https://curl.haxx.se/download.html</a></span></p>
+					</section>
+					<section>
+<h2>Exercise 13: cURL</h2>
+<pre><code class="bash">
+# Get your own profile
+curl https://api.github.com/users/&lt;username&gt;
+
+# Same, but authenticated and show some information:
+curl -i -u &lt;username&gt; https://api.github.com/user
+
+# Get data for a repo
+curl -i -u &lt;username&gt; https://api.github.com/repos/hbz/swib16-workshop
+
+</code></pre>
+					</section>
+					<section>
+						<h1>jq</h1>
+						<p><span class="fragment">Last cURL output was pretty long, we often want specific values</span></p>
+						<p><span class="fragment">jq: &quot;A lightweight and flexible command-line JSON processor&quot;</span></p>
+						<p><span class="fragment"><a href="https://stedolan.github.io/jq/" target="_blank">https://stedolan.github.io/jq/</a></span></p>
+						<p><span class="fragment"><a href="https://jqplay.org/">https://jqplay.org/</a></span></p>
+					</section>
+					<section>
+<h2>Exercise 14: jq basics</h2>
+<pre><code class="bash"># We start with cURL again:
+curl 'https://api.github.com/repos/hbz/swib16-workshop/commits'
+
+# We pipe the JSON to the jq format
+curl 'https://api.github.com/repos/hbz/swib16-workshop/commits' | jq
+
+# Pick out just the first array element
+curl [...] | jq '.[0]'
+
+# Construct new JSON with the fields we care about
+jq '.[0] | {message: .commit.message, author: .commit.author.name}'
+
+# Looks good, now let's feed each commit into that format
+jq '.[] | {message: .commit.message, author: .commit.author.name}'
+
+# You can redirect any output to a file
+curl [...] | jq '.[] | .commit.author.name' > output.txt
+</code></pre>
+					</section>
+					<section>
+<h2>Exercise 15: backup issues</h2>
+<pre><code class="bash"># We start with cURL again:
+curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all
+
+# The task: get all issues, with all their comments, store as file
+</code></pre>
+<pre><code class="bash"># jq supports compact output, "JSON lines"
+jq -c
+
+# How to delete quotes from a URL:
+"https://api.github.com/repos/hbz/swib16-workshop" | tr -d '"'
+
+# How to iterate over a list of URLs in a file:
+while read URL
+do
+  echo $URL
+done &lt; urls.txt
+</code></pre>
+					</section>
+					<section>
+<h2>Exercise 15: sample solution</h2>
+<pre><code class="bash"># First lets collect all issues with IDs and their comments URLs:
+curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all 
+ | jq -c '.[] | {id: .number, body: .body, comments: .comments_url'} 
+ > issues.jsonl
+
+# For each line, we then append the body and all comments to a file:
+while read ISSUE
+do
+	ID=$(echo $ISSUE | jq '.id')
+	echo $ISSUE | jq '.body' > $ID.txt
+	URL=$(echo $ISSUE | jq '.comments' | tr -d '"')
+	curl $URL | jq '.[] | .body' >> $ID.txt
+done &lt; issues.jsonl
+</code></pre>
+					</section>
+					<section>
+						<h1>Webhooks &amp; events</h1>
+						<p><span class="fragment">You can register a webhook for your project</span></p>
+						<p><span class="fragment">Makes GitHub send events to a specified URL<br/>e.g. when commits are pushed, issues opened, or comments added</span></p>
+						<p><span class="fragment">Server running at given URL can handle these events</span></p>
+					</section>
+					<section>
+						<h1>Webhook sample</h1>
+						<p><span class="fragment">We use GitHub Webhooks for the Metafacture project</span></p>
+						<p><span class="fragment">Back up issues in the metafacture-documentation repo | <a href="https://github.com/culturegraph/metafacture-documentation/issues/1" target="_blank">details</a></span></p>
+						<p><span class="fragment">Tweet project activity | <a href="https://github.com/culturegraph/metafacture-documentation/issues/2" target="_blank">details</a></span></p>
 					</section>
 				</section>
 
@@ -670,7 +866,7 @@ git push origin bugfix-issue-1
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'none', // none/fade/slide/convex/concave/zoom
 				backgroundTransition: 'none',
 
 				// Optional reveal.js plugins
