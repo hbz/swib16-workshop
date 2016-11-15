@@ -165,18 +165,42 @@
 					</section>
 
 					<section>
-						<h2>Set up project</h2>
-						<pre><code class="nohighlight" data-trim contenteditable>
-cd ; mkdir git ; cd git
-mkdir lodworkshop-project
-cd lodworkshop-project
-git init
-						</code></pre>
-						<h2>Verify project setup</h2>
-						<pre><code class="nohighlight" data-trim contenteditable>
-git status
-						</code></pre>
-						<p>Try it in your terminal!</p>
+						<h2>Exercise 1:<br/>set up a local project with git</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Create a location for all your git repos</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ cd ~
+$ mkdir git
+$ cd git
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Create an empty git repo</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ mkdir lodworkshop-project
+$ cd lodworkshop-project
+$ git init
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Verify project setup</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>$ means you should type this in your terminal application or git shell</p>
 					</section>
 
 					<section>
@@ -184,20 +208,54 @@ git status
 					</section>
 
 					<section>
-						<h2>Create a file</h2>
-						<p>With your text editor, create a new file with content <code>bonn,"50.733992,7.099814"</code></p>
-						<p>Save it as <code>locations.csv</code> in <code>lodworkshop-project</code></p>
-
-						<h2>Commit the file to git</h2>
-						<pre><code class="nohighlight" data-trim contenteditable>
-git status
-git commit -a .
-						</code></pre>
-						<h2>Verify addition</h2>
-						<pre><code class="nohighlight" data-trim contenteditable>
-git status
-git log
-						</code></pre>
+						<h2>Exercise 2:<br/>add a file to your local project</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>With your text editor, create a new file with content:</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+bonn,"50.733992,7.099814"
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Save it as:</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+lodworkshop-project/locations.csv
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Verify the status</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Commit the file</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git commit -a .
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Verify addition</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+$ git log
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 				</section>
 
@@ -218,23 +276,36 @@ git log
 						<h1>Exercise 3:<br/>Set up a remote</h1>
 					</section>
 					<section>
-						<h2>Exercise 3-a: <br/>Create a remote repo</h2>
-						<span class="fragment"><p>Create new repo on <a target="_blank" href="http://github.com">github.com</a> ('+' sign, upper right)</p></span>
-						<span class="fragment"><p>Set the repository name to 'lodworkshop-project'</p></span>
-						<span class="fragment"><p>Click 'Create repository'</p></span>
-					</section>
-					<section>
-						<h2>Exercise 3-b: <br/>Connect your local and your remote repo</h2>
-						<ol>
-						<span class="fragment"><li><p>Copy repo URL (green button 'clone or download')</p></li></span>
-						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
-git remote add origin URL-YOU-COPIED
-						</code></pre></li></span>
-						<span class="fragment"><li><pre><code class="nohighlight" data-trim contenteditable>
-git push origin master
-						</code></pre></li></span>
-						<span class="fragment"><li><p>Visit your repo on <a target="_blank" href="http://github.com">github.com</a>, verify your file is there</p></li></span>
-						</ol>
+						<h2>Exercise 3: <br/>Set up a remote repo</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Create new repo ('+' sign, upper right), set the repository name to 'lodworkshop-project', click 'Create repository'</td>
+									<td>&nbsp;&nbsp;<a target="_blank" href="http://github.com">http://github.com</a></td>
+								</tr>
+								<tr>
+									<td>
+										Copy repo URL (green button 'clone or download') and use it to add a new remote
+									</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote add origin &lt;URL&gt;
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Push your local repo content to the remote repo</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git push origin master
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Visit your repo on GitHub, verify your file is there</p>
 					</section>
 				</section>
 
@@ -249,10 +320,39 @@ git push origin master
 					</section>
 					<section>
 						<h2>Exercise 4-a:<br/>simple README file</h2>
-						<p><span class="fragment">With your text editor, create a new file with content:<br/> <code>The locations.csv file maps location names to geo coordinates formatted as "latitude,longitude".</code></span></p>
-						<p><span class="fragment">Save it as <code>README</code> in <code>lodworkshop-project</code></span></p>
-						<p><span class="fragment">Add, commit, and push it to GitHub</span></p>
-						<p><span class="fragment">Visit your repo on GitHub</span></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="25%" />
+							<col width="75%" />
+							<tbody>
+								<tr>
+									<td>With your text editor, create a new file with content:</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+The locations.csv file maps location names to 
+geo coordinates formatted as "latitude,longitude".
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Save it as:</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+lodworkshop-project/README
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Commit and push it to GitHub</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git commit -a .
+$ git push origin master
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Visit your repo on GitHub to see it used</p>
 					</section>
 					<section>
 						<h1>Markdown</h1>
@@ -262,9 +362,33 @@ git push origin master
 					</section>
 					<section>
 						<h2>Exercise 4-b:<br/>README formatting</h2>
-						<p><span class="fragment">Rename the README file to README.md</span></p>
-						<p><span class="fragment">Add headers, styling, and details to your README content</span></p>
-						<p><span class="fragment"><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">http://help.github.com/articles/basic-writing-and-formatting-syntax</a></span></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Rename the README file to README.md</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ mv README README.md
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Add headers, styling, and details to your README content</td>
+									<td>&nbsp;&nbsp;&nbsp;<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank">See GitHub formatting docs</a></td>
+								</tr>
+								<tr>
+									<td>Commit and push it to GitHub</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git commit -a .
+$ git push origin master
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 					<section>
 						<h1>Wiki</h1>
@@ -280,9 +404,21 @@ git push origin master
 					</section>
 					<section>
 						<h2>Exercise 5:<br/>Set up a GitHub page</h2>
-						<p><span class="fragment">Go to your repo's settings, then 'Launch automatic page generator'</span></p>
-						<p><span class="fragment">Load initial content from README.md, select a theme</span></p>
-						<p><span class="fragment">The pages are actually files in your repo, see details:<br/><a href="https://help.github.com/categories/github-pages-basics/">https://help.github.com/categories/github-pages-basics/</a></span></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="100%" />
+							<tbody>
+								<tr>
+									<td>Go to your repo's settings, 'Launch automatic page generator'</td>
+								</tr>
+								<tr>
+									<td>Load initial content from README.md, select a theme</td>
+								</tr>
+								<tr>
+									<td>The pages are actually files in your repo, see details:<br/><a href="https://help.github.com/categories/github-pages-basics/">https://help.github.com/categories/github-pages-basics/</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Visit your project's page at <br/><code>http://&lt;user&gt;.github.io/&lt;repo&gt;</code></p>
 					</section>
 				</section>
 
@@ -332,15 +468,38 @@ git push origin master
 
 					<section>
 						<h2>Exercise 6:<br/>fork and clone the repo</h2>
-						<ol>
-						<span class="fragment"><li><p>Go to <a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a>, click Fork (upper right)</p></li></span>
-						<span class="fragment"><li><p>Copy the URL (green button 'clone or download') of your fork</p></li></span>
-						<span class="fragment"><li><p><pre><code class="nohighlight" data-trim contenteditable>
-cd ; cd git
-git clone URL-YOU-COPIED
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="35%" />
+							<col width="65%" />
+							<tbody>
+								<tr>
+									<td>Fork the project repo ('Fork' button, upper right)</td>
+									<td>&nbsp;&nbsp;&nbsp;<a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a></td>
+								</tr>
+								<tr>
+									<td>Copy the URL (green button 'clone or download') and clone your fork</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+cd ~
+cd git
+git clone &lt;URL&gt;
 cd swib16-project
-						</code></pre></p></li></span>
-						</ol>
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Look around a bit in the new repo</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+git status
+git log
+git remote -v
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>You now have a local clone of your own fork of the original project</p>
 					</section>
 				</section>
 
@@ -484,9 +643,26 @@ cd swib16-project
 
 					<section>
 						<h2>Exercise 7-a: <br/>Implement your fix</h2>
-						<p><span class="fragment">Find a bug in the current project implementation</span></p>
-						<p><span class="fragment">Open an issue for the bug</span></p>
-						<p><span class="fragment">Fix the bug locally</span></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Find a bug in the current project implementation</td>
+									<td><a href="https://hbz.github.io/swib16-project/" target="_blank">visit project site</a><br/> <a
+										href="https://github.com/hbz/swib16-project/blob/master/index.html" target="_blank">view source</a></td>
+								</tr>
+								<tr>
+									<td>Open an issue for the bug</td>
+									<td><a href="https://github.com/hbz/swib16-project/issues/new" target="_blank">open new GitHub issue</a></td>
+								</tr>
+								<tr>
+									<td>Fix the bug locally</td>
+									<td/>
+								</tr>
+							</tbody>
+						</table>
+						<p>Works on my computer, next: let's integrate</p>
 					</section>
 
 					<section>
@@ -506,18 +682,37 @@ cd swib16-project
 
 					<section>
 						<h2>Exercise 7-b: <br/>Propose your fix</h2>
-						<ol>
-						<span class="fragment"><li><p>Create a new local branch</p>
-						<pre><code class="nohighlight" data-trim contenteditable>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Create a new local branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
 git checkout -b bugfix-issue-1
-						</code></pre></li></span>
-						<span class="fragment"><li><p>Commit your changes to the branch</p></li></span>
-						<span class="fragment"><li><p>Push your branch to the remote</p>
-						<pre><code class="nohighlight" data-trim contenteditable>
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Commit your changes to the branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+git commit -a .
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Push your branch to the remote</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
 git push origin bugfix-issue-1
-						</code></pre></li></span>
-						<span class="fragment"><li><p>Open a pull request for the branch</p></li></span>
-						</ol>
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Open a pull request for the branch on GitHub, review and describe it</p>
 					</section>
 
 					<section>
@@ -529,16 +724,62 @@ git push origin bugfix-issue-1
 
 					<section>
 						<h2>Exercise 7-c: <br/>Review your fix</h2>
-						<p><span class="fragment">Assign issue to non-developer, with instructions on how to review; review</span></p>
-						<p><span class="fragment">Assign pull request to developer; review</span></p>
-						<p><span class="fragment">Both positive: merge the pull request</span></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="100%" />
+							<tbody>
+								<tr>
+									<td>Assign issue to non-developer, with instructions on how/where to review (for web applications, typically a link to the site)</td>
+								</tr>
+								<tr>
+									<td>Assign pull request to developer</td>
+								</tr>
+								<tr>
+									<td>When both reviews are positive: merge the pull request</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>With GitHub pages created from the master branch, we're done</p>
 					</section>
 				</section>
 				<section>
 					<h1>Exercise 8:<br/>add a feature</h1>
-					<p><span class="fragment">Libraries in X, each team picks a place</span></p>
-					<p><span class="fragment">Open an issue for the feature</span></p>
-					<p><span class="fragment">Implement the feature locally, propose, review, and deploy it</span></p>
+					<h1>&quot;Libraries in X&quot</h1>
+				</section>
+				<section>
+					<h2>Exercise 8a:<br/>add a new map</h2>
+					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+						<col width="100%" />
+						<tbody>
+							<tr>
+								<td>Libraries in X, each team picks a place</td>
+							</tr>
+							<tr>
+								<td>Open an issue for the map</td>
+							</tr>
+							<tr>
+								<td>Implement the feature locally, propose, review, and deploy it</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Remember to reference the issue in commits and pull requests</p>
+				</section>
+				<section>
+					<h2>Exercise 8b:<br/>integrate with other maps</h2>
+					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+						<col width="100%" />
+						<tbody>
+							<tr>
+								<td>Add links to the other maps below your own map</td>
+							</tr>
+							<tr>
+								<td>Open an issue for the integration</td>
+							</tr>
+							<tr>
+								<td>Implement the links locally, propose, review, and deploy it</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>Remember to reference the issue in commits and pull requests</p>
 				</section>
 
 				<section>
@@ -629,9 +870,20 @@ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h2>Exercise 9:<br/>add a license</h2>
-						<p>Option 1: local file, add, commit, push</p>
-						<p>Option 2: use GitHub web UI, add file, use template</p>
-						<p><a href="https://help.github.com/articles/adding-a-license-to-a-repository" target="_blank">help.github.com/articles/adding-a-license-to-a-repository</a></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="100%" />
+							<tbody>
+								<tr>
+									<td>Option 1: local file, add, commit, push</td>
+								</tr>
+								<tr>
+									<td>Option 2: use GitHub web UI, add file, use template</td>
+								</tr>
+								<tr>
+									<td><a href="https://help.github.com/articles/adding-a-license-to-a-repository" target="_blank">https://help.github.com/articles/adding-a-license-to-a-repository</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 					<section>
 						<h1>CONTRIBUTING</h1>
@@ -668,9 +920,20 @@ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h2>Exercise 11:<br/>pull request templates</h2>
-						<p>Create, add, commit, push file: PULL_REQUEST_TEMPLATE.md</p>
-						<p>Open a pull request to see the template</p>
-						<p><a href="https://help.github.com/articles/creating-a-pull-request-template-for-your-repository" target="_blank">help.github.com/articles/creating-a-pull-request-template-for-your-repository</a></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="100%" />
+							<tbody>
+								<tr>
+									<td>Create, add, commit, push file: PULL_REQUEST_TEMPLATE.md <br/>(Template for: Which issue is fixed? How to reproduce the fix?)</td>
+								</tr>
+								<tr>
+									<td>Open a pull request to see the template</td>
+								</tr>
+								<tr>
+									<td><a href="https://help.github.com/articles/creating-a-pull-request-template-for-your-repository" target="_blank">https://help.github.com/articles/creating-a-pull-request-template-for-your-repository</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 					<section>
 						<h1>Issue templates</h1>
@@ -680,9 +943,20 @@ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h2>Exercise 12:<br/>issue templates</h2>
-						<p>Create, add, commit, push file: ISSUE_TEMPLATE.md</p>
-						<p>Create a new issue to see the template</p>
-						<p><a href="https://help.github.com/articles/creating-an-issue-template-for-your-repository/" target="_blank">help.github.com/articles/creating-an-issue-template-for-your-repository/</a></p>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="100%" />
+							<tbody>
+								<tr>
+									<td>Create, add, commit, push file: ISSUE_TEMPLATE.md <br/>(Template for: Expected behavior, actual behavior, steps to reproduce, environment)</td>
+								</tr>
+								<tr>
+									<td>Create a new issue to see the template</td>
+								</tr>
+								<tr>
+									<td><a href="https://help.github.com/articles/creating-an-issue-template-for-your-repository/" target="_blank">https://help.github.com/articles/creating-an-issue-template-for-your-repository/</a></td>
+								</tr>
+							</tbody>
+						</table>
 					</section>
 					<section>
 						<h1>Feedback welcome! <br/><small>(with issue templates)</small></h1>
@@ -768,16 +1042,16 @@ git push origin bugfix-issue-1
 						<p><span class="fragment"><a href="https://curl.haxx.se/download.html" target="_blank">https://curl.haxx.se/download.html</a></span></p>
 					</section>
 					<section>
-<h2>Exercise 13: cURL</h2>
+<h2>Exercise 13: <br/>cURL</h2>
 <pre><code class="bash">
 # Get your own profile
-curl https://api.github.com/users/&lt;username&gt;
+$ curl https://api.github.com/users/&lt;user&gt;
 
 # Same, but authenticated and show some information:
-curl -i -u &lt;username&gt; https://api.github.com/user
+$ curl -i -u &lt;user&gt; https://api.github.com/user
 
 # Get data for a repo
-curl -i -u &lt;username&gt; https://api.github.com/repos/hbz/swib16-workshop
+$ curl -i -u &lt;user&gt; https://api.github.com/repos/hbz/swib16-workshop
 
 </code></pre>
 					</section>
@@ -789,15 +1063,15 @@ curl -i -u &lt;username&gt; https://api.github.com/repos/hbz/swib16-workshop
 						<p><span class="fragment"><a href="https://jqplay.org/">https://jqplay.org/</a></span></p>
 					</section>
 					<section>
-<h2>Exercise 14: jq basics</h2>
+<h2>Exercise 14: <br/>jq basics</h2>
 <pre><code class="bash"># We start with cURL again:
-curl 'https://api.github.com/repos/hbz/swib16-workshop/commits'
+$ curl 'https://api.github.com/repos/hbz/swib16-workshop/commits'
 
 # We pipe the JSON to the jq format
-curl 'https://api.github.com/repos/hbz/swib16-workshop/commits' | jq
+$ curl 'https://api.github.com/repos/hbz/swib16-workshop/commits' | jq
 
 # Pick out just the first array element
-curl [...] | jq '.[0]'
+$ curl [...] | jq '.[0]'
 
 # Construct new JSON with the fields we care about
 jq '.[0] | {message: .commit.message, author: .commit.author.name}'
@@ -806,11 +1080,11 @@ jq '.[0] | {message: .commit.message, author: .commit.author.name}'
 jq '.[] | {message: .commit.message, author: .commit.author.name}'
 
 # You can redirect any output to a file
-curl [...] | jq '.[] | .commit.author.name' > output.txt
+$ curl [...] | jq '.[] | .commit.author.name' > output.txt
 </code></pre>
 					</section>
 					<section>
-<h2>Exercise 15: backup issues</h2>
+<h2>Exercise 15: <br/>backup issues</h2>
 <pre><code class="bash"># We start with cURL again:
 curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all
 
@@ -830,7 +1104,7 @@ done &lt; urls.txt
 </code></pre>
 					</section>
 					<section>
-<h2>Exercise 15: sample solution</h2>
+<h2>Exercise 15: <br/>sample solution</h2>
 <pre><code class="bash"># First lets collect all issues with IDs and their comments URLs:
 curl https://api.github.com/repos/hbz/swib16-workshop/issues?state=all 
  | jq -c '.[] | {id: .number, body: .body, comments: .comments_url'} 
