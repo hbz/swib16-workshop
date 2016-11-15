@@ -103,7 +103,7 @@
 
 					<section>
 						<h1>It's great!</h1>
-						<p><span class="fragment">You <a href="http://chris.beams.io/posts/git-commit/#seven-rules">describe</a> the commit with a comment</span></p>
+						<p><span class="fragment"><a href="http://chris.beams.io/posts/git-commit/#seven-rules">You describe the commit with a comment</a></span></p>
 						<p><span class="fragment">For each commit, you can see which files changed and how, plus the description of the changes</span></p>
 						<p><span class="fragment">You have a history where you can look up how and why the files came to be the way they are right now</span></p>
 						<p><span class="fragment">And a safety net that allows you to roll back to any previous state</span></p>
@@ -230,10 +230,11 @@ lodworkshop-project/locations.csv
 									</td>
 								</tr>
 								<tr>
-									<td>Verify the status</td>
+									<td>Verify the status and what you're changing</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git status
+$ git diff
 										</code></pre>
 									</td>
 								</tr>
@@ -342,10 +343,20 @@ lodworkshop-project/README
 									</td>
 								</tr>
 								<tr>
+									<td>Verify the status and what you're changing</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+$ git diff
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
 									<td>Commit and push it to GitHub</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git commit -a .
+$ git log
 $ git push origin master
 										</code></pre>
 									</td>
@@ -379,10 +390,20 @@ $ mv README README.md
 									<td>&nbsp;&nbsp;&nbsp;<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank">See GitHub formatting docs</a></td>
 								</tr>
 								<tr>
+									<td>Verify the status and what you're changing</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+$ git diff
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
 									<td>Commit and push it to GitHub</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git commit -a .
+$ git log
 $ git push origin master
 										</code></pre>
 									</td>
@@ -480,10 +501,10 @@ $ git push origin master
 									<td>Copy the URL (green button 'clone or download') and clone your fork</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-cd ~
-cd git
-git clone &lt;URL&gt;
-cd swib16-project
+$ cd ~
+$ cd git
+$ git clone &lt;URL&gt;
+$ cd swib16-project
 										</code></pre>
 									</td>
 								</tr>
@@ -491,9 +512,9 @@ cd swib16-project
 									<td>Look around a bit in the new repo</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-git status
-git log
-git remote -v
+$ git status
+$ git log
+$ git remote -v
 										</code></pre>
 									</td>
 								</tr>
@@ -690,7 +711,16 @@ git remote -v
 									<td>Create a new local branch</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-git checkout -b bugfix-issue-1
+$ git checkout -b bugfix-issue-1
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Verify the status and what you're changing</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+$ git diff
 										</code></pre>
 									</td>
 								</tr>
@@ -698,7 +728,8 @@ git checkout -b bugfix-issue-1
 									<td>Commit your changes to the branch</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-git commit -a .
+$ git commit -a .
+$ git log
 										</code></pre>
 									</td>
 								</tr>
@@ -706,7 +737,7 @@ git commit -a .
 									<td>Push your branch to the remote</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-git push origin bugfix-issue-1
+$ git push origin bugfix-issue-1
 										</code></pre>
 									</td>
 								</tr>
