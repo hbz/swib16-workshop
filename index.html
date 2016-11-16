@@ -92,19 +92,20 @@
 				<section>
 					<section>
 						<h1>Git</h1>
-						<p><span class="fragment">Git is a version control system</span></p>
-						<p><span class="fragment">It's the technical core of GitHub</span></p>
+						<p><span class="fragment">Git is the technical core of GitHub</span></p>
+						<p><span class="fragment">It's a version control system</span></p>
 					</section>
 
 					<section>
 						<h1>Version control</h1>
 						<p><span class="fragment">Version control is like a time machine for your files</span></p>
 						<p><span class="fragment">You <i>commit</i> files and edits to the version control system</span></p>
+						<p><span class="fragment">The version control system tracks all your files and changes</span></p>
 						<p><span class="fragment">You can go back to or look at any state you committed</span></p>
 					</section>
 
 					<section>
-						<h1>It's great!</h1>
+						<h1>That's very useful</h1>
 						<p><span class="fragment"><a href="http://chris.beams.io/posts/git-commit/#seven-rules">You describe the commit with a comment</a></span></p>
 						<p><span class="fragment">For each commit, you can see which files changed and how, plus the description of the changes</span></p>
 						<p><span class="fragment">You have a history where you can look up how and why the files came to be the way they are right now</span></p>
@@ -115,7 +116,7 @@
 						<h1>Not just for software</h1>
 						<p><span class="fragment">Version control and collaboration make sense not just for software</span></p>
 						<p><span class="fragment">Data, documentation, blogs, etc.</span></p>
-						<p><span class="fragment">Some examples:</span></p>
+						<p><span class="fragment">Some examples how we use it:</span></p>
 						<p><span class="fragment"><a href="https://github.com/hbz/swib16-workshop">https://github.com/hbz/swib16-workshop</a></span></p>
 						<p><span class="fragment"><a href="https://github.com/hbz/lookup-tables">https://github.com/hbz/lookup-tables</a></span></p>
 						<p><span class="fragment"><a href="https://github.com/libreas/ausgabe29">https://github.com/libreas/ausgabe29</a></span></p>
@@ -286,7 +287,7 @@ $ git log
 							<tbody>
 								<tr>
 									<td>Create new repo ('+' sign, upper right), set the repository name to 'lodworkshop-project', click 'Create repository'</td>
-									<td>&nbsp;&nbsp;<a target="_blank" href="http://github.com">http://github.com</a></td>
+									<td>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://github.com">http://github.com</a></td>
 								</tr>
 								<tr>
 									<td>
@@ -328,7 +329,7 @@ $ git push origin master
 							<col width="75%" />
 							<tbody>
 								<tr>
-									<td>With your text editor, create a new file with content:</td>
+									<td>Create a new file:</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 The locations.csv file maps location names to 
@@ -345,7 +346,7 @@ lodworkshop-project/README
 									</td>
 								</tr>
 								<tr>
-									<td>Verify the status and what you're changing</td>
+									<td>Verify status and changes</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git status
@@ -371,7 +372,7 @@ $ git push origin master
 						<h1>Markdown</h1>
 						<p><span class="fragment">Markdown is a lightweight wiki-style markup language</span></p>
 						<p><span class="fragment">Plain, simple, readable text files &amp; visual HTML rendering</span></p>
-						<p><span class="fragment">Supported everywhere on GitHub: wiki, issues, README, etc. (and on many other sites)</span></p>
+						<p><span class="fragment">Supported everywhere on GitHub: wiki, issues, README, etc. <br/>(and on many other sites)</span></p>
 					</section>
 					<section>
 						<h2>Exercise 4-b:<br/>README formatting</h2>
@@ -446,38 +447,15 @@ $ git push origin master
 				</section>
 
 				<section>
-					<h1>Contributing to existing GitHub projects</h1>
+					<h1>Collaborating on GitHub projects</h1>
 				</section>
 
-				<section>
-					<section>
-						<h1>GitHub Issues</h1>
-						<p><span class="fragment">GitHub contains an integrated issue tracker</span></p>
-						<p><span class="fragment">Issues are organized with colored labels and support markdown</span></p>
-						<p><span class="fragment">Easily link to code, commits, users, other issues, specific comments</span></p>
-					</section>
-
-					<section data-background="img/github-issues.png"
-						data-background-size="contain">
-						<a target="_blank" title="https://github.com/hbz/swib16-workshop/issues"
-							href="https://github.com/hbz/swib16-workshop/issues"><h1>
-								&nbsp;<br />&nbsp;<br />&nbsp;
-							</h1></a>
-					</section> 
-
-					<section data-background="img/github-issue.png"
-						data-background-size="contain">
-						<a target="_blank" title="https://github.com/hbz/swib16-workshop/issues/9"
-							href="https://github.com/hbz/swib16-workshop/issues/9"><h1>
-								&nbsp;<br />&nbsp;<br />&nbsp;
-							</h1></a>
-					</section>
-				</section>
 				<section>
 					<section>
 						<h1>Team exercises</h1>
 						<p><span class="fragment">Mixed teams, different roles: developers and non-developers</span></p>
 						<p><span class="fragment">Different tasks for each role</span></p>
+						<p><span class="fragment">Form teams, e.g. 2 librarians, 2 developers for each team</span></p>
 					</section>
 
 					<section>
@@ -489,6 +467,24 @@ $ git push origin master
 						</h1>
 					</section>
 
+					<section data-background="img/map-6.png"
+						data-background-size="contain">
+						<a target="_blank" title="Switch to live site" href="https://hbz.github.io/swib16-project/"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<h1>Forks, clones, repos</h1>
+						<p><span class="fragment">Fork: your own copy of a repo on GitHub</span></p>
+						<p><span class="fragment">Clone: a local copy of a repo</span></p>
+						<p><span class="fragment">Original project, fork, and clone are all repos</span></p>
+					</section>
+
+					<section>
+						<h1><img alt="TODO: Forking figure" src=""/></h1>
+					</section>
+ 
 					<section>
 						<h2>Exercise 6:<br/>fork and clone the repo</h2>
 						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
@@ -496,8 +492,8 @@ $ git push origin master
 							<col width="65%" />
 							<tbody>
 								<tr>
-									<td>Fork the project repo ('Fork' button, upper right)</td>
-									<td>&nbsp;&nbsp;&nbsp;<a href="http://github.com/hbz/swib16-project" target="_blank">http://github.com/hbz/swib16-project</a></td>
+									<td>Fork the project repo ('Fork', upper right)</td>
+									<td>&nbsp;&nbsp;&nbsp;<a href="https://github.com/hbz/swib16-project" target="_blank">https://github.com/hbz/swib16-project</a></td>
 								</tr>
 								<tr>
 									<td>Copy the URL (green button 'clone or download') and clone your fork</td>
@@ -576,6 +572,7 @@ $ git remote -v
 						<h2>Same URL, other usage</h2>
 						<p><span class="fragment">Call URL from command line</span></p>
 						<p><span class="fragment">Call URL from code, e.g. Javascript</span></p>
+						<p><span class="fragment">We want to get <i>Libraries in Bonn</i> from the API</span></p>
 					</section>
 
 					<section data-background="img/map-1.png"
@@ -586,12 +583,20 @@ $ git remote -v
 							</h1></a>
 					</section>
 
+					<section>
+						<h2>Display that data on a map</h2>
+					</section>
+
 					<section data-background="img/map-2.png"
 						data-background-size="contain">
 						<a target="_blank" title="Switch to live query"
 							href="http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn"><h1>
 								&nbsp;<br />&nbsp;<br />&nbsp;
 							</h1></a>
+					</section>
+
+					<section>
+						<h2>Call URL from Javascript code</h2>
 					</section>
 
 					<section data-background="img/map-3.png"
@@ -626,9 +631,10 @@ $ git remote -v
 				</section>
 
 				<section>
-					<h1>Libraries in Bonn</h1>
-					<small>
-						<table>
+					<h2>Libraries in Bonn:<br/>implementation</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="30%" />
+							<col width="70%" />
 							<tbody>
 								<tr>
 									<td>Look at a sample organisation</td>
@@ -646,8 +652,7 @@ $ git remote -v
 												http://beta.lobid.org/organisations/search?format=json&q=type:Library+AND+location.address.addressLocality:Bonn</a></small></td>
 								</tr>
 								<tr>
-									<td>Embed Leaflet.js and some Javascript code in an HTML file
-										which calls query above and uses response fields</td>
+									<td>Use location from response</td>
 									<td><code>location.geo.lat</code> and <code>location.geo.lon</code></td>
 								</tr>
 								<tr>
@@ -657,8 +662,60 @@ $ git remote -v
 								</tr>
 							</tbody>
 						</table>
-					</small>
+					<p>Look around a bit, get familiar with the implementation</p>
 				</section>
+
+				<section>
+					<section>
+						<h1>GitHub Issues</h1>
+						<p><span class="fragment">GitHub contains an integrated issue tracker</span></p>
+						<p><span class="fragment">Issues are organized with colored labels and support markdown</span></p>
+						<p><span class="fragment">Easily link to code, commits, users, other issues, specific comments</span></p>
+					</section>
+
+					<section data-background="img/github-issues.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://github.com/hbz/swib16-workshop/issues"
+							href="https://github.com/hbz/swib16-workshop/issues"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+
+					<section>
+						<h1>References to users and issues</h1>
+						<p><span class="fragment">Mention users like on Twitter: @username</span></p>
+						<p><span class="fragment">Reference issues with a hash: 'See #123'</span></p>
+						<p><span class="fragment">If you reference an issue in your commit message the commit automatically appears in the issue</span></p>
+						<p><span class="fragment"><a href="https://guides.github.com/features/issues/#notifications" target="_blank">https://guides.github.com/features/issues/#notifications</a></span></p>
+					</section>
+
+					<section data-background="img/github-issue.png"
+						data-background-size="contain">
+						<a target="_blank" title="https://github.com/hbz/swib16-workshop/issues/9"
+							href="https://github.com/hbz/swib16-workshop/issues/9"><h1>
+								&nbsp;<br />&nbsp;<br />&nbsp;
+							</h1></a>
+					</section>
+				</section>
+
+				<section>
+					<h1>Linked open development</h1>
+				</section>
+
+				<section>
+					<h1><img alt="TODO: Linked open development figure" src=""/></h1>
+				</section>
+
+				<section>
+					<h1>It's all connected</h1>
+					<p><span class="fragment">Users</span></p>
+					<p><span class="fragment">Organisations</span></p>
+					<p><span class="fragment">Code</span></p>
+					<p><span class="fragment">Issues</span></p>
+					<p><span class="fragment">etc.</span></p>
+					<p><span class="fragment"><a href="https://vimeo.com/109505574" target="_blank">https://vimeo.com/109505574</a></span></p>
+				</section>
+
 				<section>
 					<section>
 						<h1>Exercise 7:<br/>fix a bug</h1>
@@ -689,6 +746,14 @@ $ git remote -v
 					</section>
 
 					<section>
+						<h1>Branching</h1>
+						<p><span class="fragment">Git's internal data structure is a graph</span></p>
+						<p><span class="fragment">Each commit has a predecessor</span></p>
+						<p><span class="fragment">Two commits with the same predecessor form a branch</span></p>
+						<p><span class="fragment"><img alt="TODO: Branching figure" src=""/></span></p>
+					</section>
+
+					<section>
 						<h1>GitHub Flow</h1>
 						<p><span class="fragment">Used by GitHub to develop GitHub</span></p>
 						<p><span class="fragment">Git makes branching and merging easy</span></p>
@@ -704,7 +769,7 @@ $ git remote -v
 					</section>
 
 					<section>
-						<h2>Exercise 7-b: <br/>Propose your fix</h2>
+						<h2>Exercise 7-b: <br/>Push to a branch</h2>
 						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
 							<col width="50%" />
 							<col width="50%" />
@@ -745,7 +810,6 @@ $ git push origin bugfix-issue-1
 								</tr>
 							</tbody>
 						</table>
-						<p>Open a pull request for the branch on GitHub, review and describe it</p>
 					</section>
 
 					<section>
@@ -755,6 +819,10 @@ $ git push origin bugfix-issue-1
 						<p><span class="fragment">Changes are visualized in the pull request (what's removed/added?), and can be commented at specific lines</span></p>
 						<p><span class="fragment">Can contain automatic checks like running tests</span></p>
 						<p><span class="fragment">Basically like an issue with extra functionality</span></p>
+					</section>
+
+					<section>
+						<h1><img alt="TODO: Visual diff in pull requests" src=""/></h1>
 					</section>
 
 					<section>
@@ -785,10 +853,10 @@ $ git push origin bugfix-issue-1
 				</section>
 				<section>
 					<h1>Exercise 8:<br/>add a feature</h1>
-					<h1>&quot;Libraries in X&quot</h1>
+					<h1>&quot;Libraries in X&quot;</h1>
 				</section>
 				<section>
-					<h2>Exercise 8a:<br/>add a new map</h2>
+					<h2>Exercise 8-a:<br/>add a new map</h2>
 					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
 						<col width="100%" />
 						<tbody>
@@ -796,7 +864,7 @@ $ git push origin bugfix-issue-1
 								<td>Libraries in X, each team picks a place</td>
 							</tr>
 							<tr>
-								<td>Open an issue for the map</td>
+								<td>Open an issue for creating the new map</td>
 							</tr>
 							<tr>
 								<td>Implement the feature locally, propose, review, and deploy it</td>
@@ -805,8 +873,26 @@ $ git push origin bugfix-issue-1
 					</table>
 					<p>Remember to reference the issue in commits and pull requests</p>
 				</section>
+				<section data-background="img/map-6.png"
+					data-background-size="contain">
+					<a target="_blank" title="Switch to live site" href="https://hbz.github.io/swib16-project/"><h1 style="color: #004678">But where are the other maps?
+						</h1></a>
+				</section>
 				<section>
-					<h2>Exercise 8b:<br/>integrate with other maps</h2>
+					<h2>Exercise 8-b:<br/>integrate with other maps</h2>
+					<table style="border: 1px solid white; border-bottom: 0px; table-layout:fixed; width: 100%">
+							<col width="50%" />
+							<col width="50%" />
+							<tbody>
+								<tr>
+									<td>Get the latest additions to the master branch (the maps added by the other teams)</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git pull origin master
+										</code></pre>
+									</td>
+								</tr>
+						</table>
 					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
 						<col width="100%" />
 						<tbody>
@@ -966,7 +1052,7 @@ $ git push origin bugfix-issue-1
 							<col width="100%" />
 							<tbody>
 								<tr>
-									<td>Create, add, commit, push file: PULL_REQUEST_TEMPLATE.md <br/>(Template for: Which issue is fixed? How to reproduce the fix?)</td>
+									<td>Create, add, commit, push file: PULL_REQUEST_TEMPLATE.md <br/>(Template for: which issue is fixed? How to reproduce the fix?)</td>
 								</tr>
 								<tr>
 									<td>Open a pull request to see the template</td>
@@ -989,7 +1075,7 @@ $ git push origin bugfix-issue-1
 							<col width="100%" />
 							<tbody>
 								<tr>
-									<td>Create, add, commit, push file: ISSUE_TEMPLATE.md <br/>(Template for: Expected behavior, actual behavior, steps to reproduce, environment)</td>
+									<td>Create, add, commit, push file: ISSUE_TEMPLATE.md <br/>(Template for: expected behavior, actual behavior, steps to reproduce, environment like browser, operating system, etc.)</td>
 								</tr>
 								<tr>
 									<td>Create a new issue to see the template</td>
@@ -1002,7 +1088,7 @@ $ git push origin bugfix-issue-1
 					</section>
 					<section>
 						<h1>Feedback welcome! <br/><small>(with issue templates)</small></h1>
-						<h2><a href="https://github.com/hbz/swib16-workshop/issues/new">https://github.com/hbz/swib16-workshop/issues/new</a></h2>
+						<p><a href="https://github.com/hbz/swib16-workshop/issues/new">https://github.com/hbz/swib16-workshop/issues/new</a></p>
 					</section>
 				</section>
 
@@ -1174,6 +1260,14 @@ done &lt; issues.jsonl
 						<p><span class="fragment">Back up issues in the metafacture-documentation repo | <a href="https://github.com/culturegraph/metafacture-documentation/issues/1" target="_blank">details</a></span></p>
 						<p><span class="fragment">Tweet project activity | <a href="https://github.com/culturegraph/metafacture-documentation/issues/2" target="_blank">details</a></span></p>
 					</section>
+				</section>
+
+				<section>
+					<h1>Further reading</h1>
+					<p><a href="https://octoverse.github.com/" target="_blank">https://octoverse.github.com</a></p>
+					<p><a href="https://data-lessons.github.io/library-git/" target="_blank">https://data-lessons.github.io/library-git</a></p>
+					<p><a href="https://github.com/jlord/git-it-electron" target="_blank">https://github.com/jlord/git-it-electron</a></p>
+					<p><a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></p>
 				</section>
 
 				<section>
