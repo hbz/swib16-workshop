@@ -210,7 +210,7 @@ $ git status
 								</tr>
 							</tbody>
 						</table>
-						<p>$ means you should type this in your terminal application or git shell</p>
+						<p><font size="5">("$" <i>means you should type this in your terminal application or git shell.</i>)</font></p>
 					</section>
 
 					<section>
@@ -232,27 +232,19 @@ bonn,"50.733992,7.099814"
 									</td>
 								</tr>
 								<tr>
-									<td>Save it as:</td>
+									<td>Save it as 'lodworkshop-project/locations.csv', add it, and check the status</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-lodworkshop-project/locations.csv
-										</code></pre>
-									</td>
-								</tr>
-								<tr>
-									<td>Verify the status and what you're changing</td>
-									<td>
-										<pre><code class="nohighlight" data-trim contenteditable>
+$ git add locations.csv
 $ git status
-$ git diff
 										</code></pre>
 									</td>
 								</tr>
 								<tr>
-									<td>Commit the file</td>
+									<td>Commit the file (triggers setup instructions, opens an editor)</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-$ git commit -a .
+$ git commit .
 										</code></pre>
 									</td>
 								</tr>
@@ -293,16 +285,26 @@ $ git log
 							<col width="50%" />
 							<tbody>
 								<tr>
-									<td>Create new repo ('+' sign, upper right), set the repository name to 'lodworkshop-project', click 'Create repository'</td>
+									<td>Create new repo ('+' sign, upper right), set the repository name to 'lodworkshop-project'</td>
 									<td>&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://github.com">http://github.com</a></td>
 								</tr>
 								<tr>
 									<td>
-										Copy repo URL (green button 'clone or download') and use it to add a new remote
+										Copy repo HTTPS URL (under the 'Quick setup' header) and use it to add a new remote
 									</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git remote add origin &lt;URL&gt;
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Verify the remote setup
+									</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote -v
 										</code></pre>
 									</td>
 								</tr>
@@ -332,32 +334,32 @@ $ git push origin master
 					<section>
 						<h2>Exercise 4-a:<br/>simple README file</h2>
 						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
-							<col width="25%" />
-							<col width="75%" />
+							<col width="40%" />
+							<col width="60%" />
 							<tbody>
 								<tr>
 									<td>Create a new file:</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-The locations.csv file maps location names to 
-geo coordinates formatted as "latitude,longitude".
+The locations.csv file maps 
+location names to geo coordinates 
+formatted as "latitude,longitude".
 										</code></pre>
 									</td>
 								</tr>
 								<tr>
-									<td>Save it as:</td>
+									<td>Save it as 'lodworkshop-project/README', add it</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-lodworkshop-project/README
+$ git add README
 										</code></pre>
 									</td>
 								</tr>
 								<tr>
-									<td>Verify status and changes</td>
+									<td>Verify the status</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ git status
-$ git diff
 										</code></pre>
 									</td>
 								</tr>
@@ -365,7 +367,7 @@ $ git diff
 									<td>Commit and push it to GitHub</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-$ git commit -a .
+$ git commit .
 $ git log
 $ git push origin master
 										</code></pre>
@@ -388,10 +390,11 @@ $ git push origin master
 							<col width="50%" />
 							<tbody>
 								<tr>
-									<td>Rename the README file to README.md</td>
+									<td>Rename the README file to README.md and add it</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
 $ mv README README.md
+$ git add README.md
 										</code></pre>
 									</td>
 								</tr>
@@ -412,7 +415,7 @@ $ git diff
 									<td>Commit and push it to GitHub</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-$ git commit -a .
+$ git commit -a
 $ git log
 $ git push origin master
 										</code></pre>
@@ -420,6 +423,7 @@ $ git push origin master
 								</tr>
 							</tbody>
 						</table>
+						<p>Visit your repo on GitHub to see it used</p>
 					</section>
 					<section>
 						<h1>Wiki</h1>
@@ -813,7 +817,7 @@ $ git diff
 									<td>Commit your changes to the branch</td>
 									<td>
 										<pre><code class="nohighlight" data-trim contenteditable>
-$ git commit -a .
+$ git commit -a
 $ git log
 										</code></pre>
 									</td>
@@ -828,6 +832,7 @@ $ git push origin bugfix-issue-1
 								</tr>
 							</tbody>
 						</table>
+						<p>Visit your repo on GitHub, notice the yellow box</p>
 					</section>
 
 					<section>
@@ -926,28 +931,56 @@ $ git push origin bugfix-issue-1
 							</h1></a>
 					</section>
 					<section>
-						<h2>Exercise 8-b:<br/>integrate with other maps</h2>
-						<table style="border: 1px solid white; border-bottom: 0px; table-layout:fixed; width: 100%">
-								<col width="50%" />
-								<col width="50%" />
-								<tbody>
-									<tr>
-										<td>Get the latest additions to the master branch (the maps added by the other teams)</td>
-										<td>
-											<pre><code class="nohighlight" data-trim contenteditable>
-	$ git pull origin master
-											</code></pre>
-										</td>
-									</tr>
-							</table>
+						<h2>Exercise 8-b:<br/>get updates from upstream</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="40%" />
+							<col width="60%" />
+							<tbody>
+								<tr>
+									<td>Check your status, you're probably on the bugfix branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Go back to your local master branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git checkout master
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Add the original repo as a new remote</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote add upstream 
+https://github.com/hbz/swib16-project.git
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Get the latest additions to the upstream master</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote -v
+$ git pull upstream master
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<h2>Exercise 8-c:<br/>integrate with other maps</h2>
 						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
 							<col width="100%" />
 							<tbody>
 								<tr>
-									<td>Add links to the other maps below your own map</td>
-								</tr>
-								<tr>
-									<td>Open an issue for the integration</td>
+									<td>Open an issue for the integration: add links to the other maps below your own map</td>
 								</tr>
 								<tr>
 									<td>Implement the links locally, propose, review, and deploy it</td>
@@ -1227,7 +1260,7 @@ $ curl https://api.github.com/users/&lt;user&gt;
 $ curl -i -u &lt;user&gt; https://api.github.com/user
 
 # Get data for a repo
-$ curl -i -u &lt;user&gt; https://api.github.com/repos/hbz/swib16-workshop
+$ curl https://api.github.com/repos/hbz/swib16-workshop
 
 </code></pre>
 					</section>
@@ -1295,6 +1328,7 @@ do
 	curl $URL | jq '.[] | .body' >> $ID.txt
 done &lt; issues.jsonl
 </code></pre>
+<p>Missing: error handling, additional info on comment author etc.</p>
 					</section>
 					<section>
 						<h1>Webhooks &amp; events</h1>
