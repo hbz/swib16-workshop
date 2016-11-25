@@ -1246,7 +1246,7 @@ $ git pull upstream master
 					<section>
 						<h1>Owning your content</h1>
 						<p><span class="fragment">GitHub is proprietary software</span></p>
-						<p><span class="fragment">Almost all the things we saw are part of the Git repo <br/>(actual code, readme, contributor guide, templates)</span></p>
+						<p><span class="fragment">Almost all the things we saw are part of the Git repo <br/>(actual files, readme, contributor guide, templates)</span></p>
 						<p><span class="fragment">Except: issues and pull request</span></p>
 					</section>
 					<section>
@@ -1330,7 +1330,6 @@ $ curl -i -u &lt;user&gt; https://api.github.com/user
 
 # Get data for a repo
 $ curl https://api.github.com/repos/hbz/swib16-workshop
-
 					</code></pre>
 					</section>
 					<section>
@@ -1421,11 +1420,11 @@ done &lt; issues.jsonl
 						<h1>Automation</h1>
 						<p><span class="fragment">Run a script like that automatically</span></p>
 						<p><span class="fragment">As a reaction to specific activity</span></p>
-						<p><span class="fragment">Like new issues or comments</span></p>
+						<p><span class="fragment">Like creation of new issues or comments</span></p>
 					</section>
 					<section>
 						<h1>Webhooks &amp; events</h1>
-						<p><span class="fragment">You can register a webhook for your project</span></p>
+						<p><span class="fragment">You can register a webhook for your GitHub repo</span></p>
 						<p><span class="fragment">Makes GitHub send events to a specified URL<br/>e.g. when commits are pushed, issues opened, or comments added</span></p>
 						<p><span class="fragment">Server running at given URL can handle these events</span></p>
 					</section>
