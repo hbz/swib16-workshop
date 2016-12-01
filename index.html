@@ -967,55 +967,57 @@ $ git push origin bugfix-issue-1
 					</section>
 				</section>
 				<section>
+					<section>
 					<h1>Integration</h1>
-					<p><span class="fragment">To continue working on the project, we want the current state</span></p>
-					<p><span class="fragment">We need to get the bugfixes from other teams into our local repo</span></p>
-					<p><span class="fragment">They have been merged into the original repo</span></p>
-					<p><span class="fragment">The original repo is often called the <i>upstream</i> repo</span></p>
-				</section>
-				<section>
-					<h2>Exercise 7-d:<br/>get updates from upstream</h2>
-					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
-						<col width="38%" />
-						<col width="62%" />
-						<tbody>
-							<tr>
-								<td>Check your current branch</td>
-								<td>
-									<pre><code class="nohighlight" data-trim contenteditable>
-$ git status
-									</code></pre>
-								</td>
-							</tr>
-							<tr>
-								<td>Go back to your local master branch</td>
-								<td>
-									<pre><code class="nohighlight" data-trim contenteditable>
-$ git checkout master
-									</code></pre>
-								</td>
-							</tr>
-							<tr>
-								<td>Add the original repo as a new remote</td>
-								<td>
-									<pre><code class="nohighlight" data-trim contenteditable>
-$ git remote add upstream 
-https://github.com/hbz/swib16-project.git
-									</code></pre>
-								</td>
-							</tr>
-							<tr>
-								<td>Get the latest additions to the upstream master</td>
-								<td>
-									<pre><code class="nohighlight" data-trim contenteditable>
-$ git remote -v
-$ git pull upstream master
-									</code></pre>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<p>We now have the bugfixes from every team in our local repo</p>
+						<p><span class="fragment">To continue working on the project, we want the current state</span></p>
+						<p><span class="fragment">We need to get the bugfixes from other teams into our local repo</span></p>
+						<p><span class="fragment">They have been merged into the original repo</span></p>
+						<p><span class="fragment">The original repo is often called the <i>upstream</i> repo</span></p>
+					</section>
+					<section>
+						<h2>Exercise 7-d:<br/>get updates from upstream</h2>
+						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+							<col width="38%" />
+							<col width="62%" />
+							<tbody>
+								<tr>
+									<td>Check your current branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+											$ git status
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Go back to your local master branch</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+											$ git checkout master
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Add the original repo as a new remote</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+											$ git remote add upstream 
+											https://github.com/hbz/swib16-project.git
+										</code></pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Get the latest additions to the upstream master</td>
+									<td>
+										<pre><code class="nohighlight" data-trim contenteditable>
+											$ git remote -v
+											$ git pull upstream master
+										</code></pre>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>We now have the bugfixes from every team in our local repo</p>
+					</section>					
 				</section>
 				<section>
 					<section>
