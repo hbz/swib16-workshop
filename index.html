@@ -967,6 +967,57 @@ $ git push origin bugfix-issue-1
 					</section>
 				</section>
 				<section>
+					<h1>Integration</h1>
+					<p><span class="fragment">To continue working on the project, we want the current state</span></p>
+					<p><span class="fragment">We need to get the bugfixes from other teams into our local repo</span></p>
+					<p><span class="fragment">They have been merged into the original repo</span></p>
+					<p><span class="fragment">The original repo is often called the <i>upstream</i> repo</span></p>
+				</section>
+				<section>
+					<h2>Exercise 7-d:<br/>get updates from upstream</h2>
+					<table style="border: 1px solid white; table-layout:fixed; width: 100%">
+						<col width="38%" />
+						<col width="62%" />
+						<tbody>
+							<tr>
+								<td>Check your current branch</td>
+								<td>
+									<pre><code class="nohighlight" data-trim contenteditable>
+$ git status
+									</code></pre>
+								</td>
+							</tr>
+							<tr>
+								<td>Go back to your local master branch</td>
+								<td>
+									<pre><code class="nohighlight" data-trim contenteditable>
+$ git checkout master
+									</code></pre>
+								</td>
+							</tr>
+							<tr>
+								<td>Add the original repo as a new remote</td>
+								<td>
+									<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote add upstream 
+https://github.com/hbz/swib16-project.git
+									</code></pre>
+								</td>
+							</tr>
+							<tr>
+								<td>Get the latest additions to the upstream master</td>
+								<td>
+									<pre><code class="nohighlight" data-trim contenteditable>
+$ git remote -v
+$ git pull upstream master
+									</code></pre>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p>We now have the bugfixes from every team in our local repo</p>
+				</section>
+				<section>
 					<section>
 						<h1>Exercise 8:<br/>add a feature</h1>
 						<h1>&quot;Libraries in X&quot;</h1>
@@ -992,60 +1043,9 @@ $ git push origin bugfix-issue-1
 						<a target="_blank" title="Switch to live site" href="https://hbz.github.io/swib16-project/"><h1 style="color: #004678">But where are the other maps?
 							</h1></a>
 					</section>
-					<section>
-						<h1>Integration</h1>
-						<p><span class="fragment">Idea: add links to the other maps to your own map</span></p>
-						<p><span class="fragment">We need to get the maps added by other teams into our local repo</span></p>
-						<p><span class="fragment">They have been merged into the original repo</span></p>
-						<p><span class="fragment">The original repo is often called the <i>upstream</i> repo</span></p>
-					</section>
-					<section>
-						<h2>Exercise 8-b:<br/>get updates from upstream</h2>
-						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
-							<col width="38%" />
-							<col width="62%" />
-							<tbody>
-								<tr>
-									<td>Check your current branch</td>
-									<td>
-										<pre><code class="nohighlight" data-trim contenteditable>
-$ git status
-										</code></pre>
-									</td>
-								</tr>
-								<tr>
-									<td>Go back to your local master branch</td>
-									<td>
-										<pre><code class="nohighlight" data-trim contenteditable>
-$ git checkout master
-										</code></pre>
-									</td>
-								</tr>
-								<tr>
-									<td>Add the original repo as a new remote</td>
-									<td>
-										<pre><code class="nohighlight" data-trim contenteditable>
-$ git remote add upstream 
-https://github.com/hbz/swib16-project.git
-										</code></pre>
-									</td>
-								</tr>
-								<tr>
-									<td>Get the latest additions to the upstream master</td>
-									<td>
-										<pre><code class="nohighlight" data-trim contenteditable>
-$ git remote -v
-$ git pull upstream master
-										</code></pre>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-						<p>We now have the additional maps from every team in our local repo</p>
-					</section>
 
 					<section>
-						<h2>Exercise 8-c:<br/>integrate with other maps</h2>
+						<h2>Exercise 8-b:<br/>integrate with other maps</h2>
 						<table style="border: 1px solid white; table-layout:fixed; width: 100%">
 							<col width="100%" />
 							<tbody>
